@@ -90,6 +90,7 @@
       padding-bottom: 0.6rem;
     }
 
+    /* ----- Clickable contact items ----- */
     .contact-item {
       display: flex;
       align-items: center;
@@ -103,6 +104,35 @@
       width: 20px;
       color: #d4af7d;
       font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: #ddd0d0;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
+    }
+
+    .contact-item a:hover {
+      color: #d4af7d;
+    }
+
+    .contact-item a i {
+      width: 20px;
+      color: #d4af7d;
+      font-size: 1rem;
+    }
+
+    /* Non-link contact items (location) */
+    .contact-item .no-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
     }
 
     .section-title {
@@ -240,12 +270,23 @@
       margin-top: 0.4rem;
     }
 
+    /* ----- Experience Items (clickable) ----- */
     .exp-item {
       display: flex;
       gap: 1.2rem;
       margin-bottom: 1.8rem;
       border-bottom: 1px solid #f0e8e2;
       padding-bottom: 1.5rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      border-radius: 8px;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .exp-item:hover {
+      background: #f8f1eb;
+      border-radius: 8px;
     }
 
     .exp-item:last-child {
@@ -310,6 +351,156 @@
       margin-top: 6px;
     }
 
+    .click-hint {
+      font-size: 0.7rem;
+      color: #b0a0a0;
+      margin-top: 0.2rem;
+      display: inline-block;
+    }
+
+    /* ---------- OVERLAY / DETAIL PAGE ---------- */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 26, 46, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .overlay-card {
+      background: #fcf9f7;
+      max-width: 700px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 32px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      position: relative;
+      animation: fadeUp 0.3s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .overlay-card .close-btn {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.8rem;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #2c1e2b;
+      cursor: pointer;
+      transition: transform 0.2s;
+      padding: 0 0.5rem;
+    }
+    .overlay-card .close-btn:hover {
+      transform: rotate(90deg);
+      color: #d4af7d;
+    }
+
+    .overlay-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #2c1e2b;
+      margin-bottom: 0.2rem;
+    }
+
+    .overlay-card .overlay-company {
+      font-weight: 600;
+      color: #d4af7d;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .overlay-card .overlay-date {
+      font-size: 0.9rem;
+      color: #7a6a6a;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .overlay-card .overlay-detail-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .overlay-card .overlay-detail-list li {
+      font-size: 1rem;
+      color: #2c1e2b;
+      margin-bottom: 0.7rem;
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+      line-height: 1.5;
+    }
+
+    .overlay-card .overlay-detail-list li i {
+      color: #d4af7d;
+      font-size: 0.6rem;
+      width: 18px;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .overlay-card .overlay-sub {
+      font-weight: 600;
+      color: #2c1e2b;
+      margin-top: 1.2rem;
+      margin-bottom: 0.3rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    /* responsive */
+    @media (max-width: 780px) {
+      .cv-card {
+        grid-template-columns: 1fr;
+      }
+      .left-panel {
+        padding: 1.8rem;
+      }
+      .right-panel {
+        padding: 1.8rem;
+      }
+      .edu-achievement {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .overlay-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .exp-item {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .profile-header h1 {
+        font-size: 1.8rem;
+      }
+      .overlay-card h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* education & achievement */
     .edu-achievement {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -367,31 +558,31 @@
       color: #2c1e2b;
     }
 
-    /* responsiveness */
-    @media (max-width: 780px) {
-      .cv-card {
-        grid-template-columns: 1fr;
-      }
-      .left-panel {
-        padding: 1.8rem;
-      }
-      .right-panel {
-        padding: 1.8rem;
-      }
-      .edu-achievement {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
+    /* metric highlight */
+    .metric-bar {
+      margin-top: 1.5rem;
+      background: #f8f1eb;
+      border-radius: 40px;
+      padding: 0.8rem 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      border: 1px solid #e8ddd5;
     }
-
-    @media (max-width: 480px) {
-      .exp-item {
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .profile-header h1 {
-        font-size: 1.8rem;
-      }
+    .metric-bar span i {
+      color: #d4af7d;
+    }
+    .footer-note {
+      margin-top: 0.8rem;
+      text-align: right;
+      font-size: 0.75rem;
+      color: #7a6a6a;
+      letter-spacing: 0.5px;
+    }
+    .footer-note i {
+      color: #d4af7d;
     }
   </style>
 </head>
@@ -405,26 +596,34 @@
         </div>
         <h1>Grace <br>Pagaduan</h1>
         <div class="title">Client Services & Operations Leader</div>
-<div class="contact-item">
-  <a href="mailto:pagaduan.graceflorenda@gmail.com" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-envelope"></i> pagaduan.graceflorenda@gmail.com
-  </a>
-</div>
-<div class="contact-item">
-  <a href="tel:+639490125198" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-phone-alt"></i> +639490125198
-  </a>
-</div>
-<div class="contact-item">
-  <a href="https://linkedin.com/in/sarahm" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin-in"></i> linkedin.com/in/thegfsadvise
-  </a>
-</div>
-<div class="contact-item">
-  <span class="no-link"><i class="fas fa-map-pin"></i> Mandaluyong, PH</span>
-</div>
 
-      <!-- Core competencies -->
+        <!-- Email – click to open draft -->
+        <div class="contact-item">
+          <a href="mailto:pagaduan.graceflorenda@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i> pagaduan.graceflorenda@gmail.com
+          </a>
+        </div>
+
+        <!-- Phone – click to dial -->
+        <div class="contact-item">
+          <a href="tel:+63490125198" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone-alt"></i> +63490125198
+          </a>
+        </div>
+
+        <!-- LinkedIn – click to open profile -->
+        <div class="contact-item">
+          <a href="https://linkedin.com/in/thegfsadvise" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i> linkedin.com/in/thegfsadvise
+          </a>
+        </div>
+
+        <!-- Location – not clickable -->
+        <div class="contact-item">
+          <span class="no-link"><i class="fas fa-map-pin"></i> Mandaluyong, PH</span>
+        </div>
+      </div>
+
       <div>
         <div class="section-title"><i class="fas fa-chart-line" style="margin-right: 8px;"></i> Core Competencies</div>
         <div class="skill-item">
@@ -445,7 +644,6 @@
         </div>
       </div>
 
-      <!-- Certifications -->
       <div>
         <div class="section-title"><i class="fas fa-certificate" style="margin-right: 8px;"></i> Certifications</div>
         <ul class="cert-list">
@@ -455,7 +653,6 @@
         </ul>
       </div>
 
-      <!-- Tools -->
       <div>
         <div class="section-title"><i class="fas fa-tools" style="margin-right: 8px;"></i> Tools</div>
         <ul class="tools-list">
@@ -474,7 +671,6 @@
 
     <!-- RIGHT PANEL -->
     <div class="right-panel">
-      <!-- Summary -->
       <div class="summary">
         <p><i class="fas fa-quote-left"></i> Results-driven operations leader with <strong>10+ years</strong> of experience across customer service, collections, client services, and dispatch. Passionate about building high-performing teams, streamlining processes, and delivering exceptional client experiences.</p>
         <div class="empower-tag"><i class="fas fa-female" style="margin-right: 4px;"></i> mentor · process improvement</div>
@@ -482,69 +678,72 @@
 
       <!-- Experience -->
       <div>
-        <div class="section-title" style="color: #2c1e2b; border-bottom-color: #d4af7d; margin-bottom: 1.2rem;"><i class="fas fa-briefcase" style="margin-right: 8px; color:#d4af7d;"></i> Experience</div>
+        <div class="section-title" style="color: #2c1e2b; border-bottom-color: #d4af7d; margin-bottom: 1.2rem;">
+          <i class="fas fa-briefcase" style="margin-right: 8px; color:#d4af7d;"></i> Experience 
+          <span style="font-size:0.7rem; font-weight:400; color:#b0a0a0; margin-left:8px;">(click any role for details)</span>
+        </div>
 
-        <!-- Dispatch Representative (2024 – present) -->
-        <div class="exp-item">
+        <!-- Dispatch Representative -->
+        <div class="exp-item" data-target="dispatch">
           <div class="exp-icon"><i class="fas fa-truck"></i></div>
           <div class="exp-content">
             <h3>Dispatch Representative</h3>
             <div class="company">Automotive Group · Vernon, CA (Remote)</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2024 – Present</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Title & Paperwork Review:</strong> Verify and process all dispatch documentation for accuracy and compliance.</li>
-              <li><i class="fas fa-circle"></i> <strong>Client Pickup/Drop-off Scheduling:</strong> Coordinate and optimize daily schedules for vehicle pickups nationwide.</li>
-              <li><i class="fas fa-circle"></i> <strong>Documentation & Compliance:</strong> Ensure all records meet regulatory standards and company policies.</li>
-              <li><i class="fas fa-circle"></i> Reduced average response time by <strong>28%</strong> through optimized routing and real-time tracking.</li>
+              <li><i class="fas fa-circle"></i> <strong>Title & Paperwork Review:</strong> Verify and process all dispatch documentation.</li>
+              <li><i class="fas fa-circle"></i> <strong>Client Pickup/Drop-off Scheduling:</strong> Coordinate daily schedules for 50+ technicians.</li>
+              <li><i class="fas fa-circle"></i> Reduced average response time by <strong>28%</strong> through optimized routing.</li>
             </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
 
-        <!-- Senior Client Services Representative (2022–2024) -->
-        <div class="exp-item">
+        <!-- Senior Client Services -->
+        <div class="exp-item" data-target="client-services">
           <div class="exp-icon"><i class="fas fa-headset"></i></div>
           <div class="exp-content">
             <h3>Senior Client Services Representative</h3>
             <div class="company">Mirion Technologies · Los Angeles, CA (Remote)</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2022 – 2024</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Client Account Management:</strong> Conduct regular meetings with clients to present RAILs and provide account updates. Proactively manage accounts by sending Health Check Reports and identifying non-communicating devices.</li>
-              <li><i class="fas fa-circle"></i> <strong>Issue Resolution & Support:</strong> Investigate and resolve billing discrepancies, crediting concerns, and complex client inquiries with professionalism and speed.</li>
-              <li><i class="fas fa-circle"></i> <strong>Cross-Functional Collaboration:</strong> Partner with sales, collections, and enterprise teams to resolve issues and improve client experience.</li>
-              <li><i class="fas fa-circle"></i> <strong>Documentation & Compliance:</strong> Oversee Commercial Invoices, Air Waybills, and customs documentation for international shipments, ensuring full regulatory compliance.</li>
-              <li><i class="fas fa-circle"></i> Achieved <strong>98% client retention</strong> through proactive communication and timely resolution.</li>
+              <li><i class="fas fa-circle"></i> <strong>Client Account Management:</strong> Regular meetings, Health Check Reports, device monitoring.</li>
+              <li><i class="fas fa-circle"></i> <strong>Issue Resolution:</strong> Billing, crediting, and complex client inquiries.</li>
+              <li><i class="fas fa-circle"></i> Achieved <strong>98% client retention</strong> through proactive communication.</li>
             </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
 
-        <!-- Collections Team Lead (2017–2021) -->
-        <div class="exp-item">
+        <!-- Collections Team Lead -->
+        <div class="exp-item" data-target="collections">
           <div class="exp-icon"><i class="fas fa-hand-holding-usd"></i></div>
           <div class="exp-content">
             <h3>Collections Team Lead</h3>
             <div class="company">Hyundai Capital America · Remote</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2017 – 2021</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Team Performance & SLAs:</strong> Ensure team meets or exceeds service levels through weekly coaching sessions and continuous improvement initiatives.</li>
-              <li><i class="fas fa-circle"></i> <strong>Mentorship & Escalation:</strong> Provide direction and sound advice to team members; respond timely to escalations and mentor direct reports.</li>
-              <li><i class="fas fa-circle"></i> <strong>Accountability & Reporting:</strong> Monitor team performance, plan and assign work, and escalate pending issues (e.g., employment, process breakdown) to Account Manager.</li>
-              <li><i class="fas fa-circle"></i> Led team of 21 collectors, exceeding quarterly targets by <strong>32%</strong> and reducing delinquency rates by 25%.</li>
+              <li><i class="fas fa-circle"></i> <strong>Team Performance & SLAs:</strong> Coaching, monitoring, and continuous improvement.</li>
+              <li><i class="fas fa-circle"></i> <strong>Mentorship & Escalation:</strong> Provide direction and timely escalation handling.</li>
+              <li><i class="fas fa-circle"></i> Exceeded quarterly targets by <strong>32%</strong>; reduced delinquency by 25%.</li>
             </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
 
-        <!-- Digital & Web Support (2015) -->
-        <div class="exp-item">
+        <!-- Digital & Web Support -->
+        <div class="exp-item" data-target="digital-support">
           <div class="exp-icon"><i class="fas fa-laptop"></i></div>
           <div class="exp-content">
             <h3>Digital & Web Support</h3>
             <div class="company">Tribune Publishing (TRONC) · Remote</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2015</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Customer Guidance:</strong> Guide customers on subscription access issues and provide navigation tutorials for digital platforms.</li>
-              <li><i class="fas fa-circle"></i> <strong>Troubleshooting:</strong> Deliver basic troubleshooting steps to resolve login, payment, and account-related issues.</li>
-              <li><i class="fas fa-circle"></i> Maintained <strong>96% customer satisfaction</strong> score for 6 consecutive months.</li>
+              <li><i class="fas fa-circle"></i> <strong>Customer Guidance:</strong> Subscription access and navigation tutorials.</li>
+              <li><i class="fas fa-circle"></i> <strong>Troubleshooting:</strong> Login, payment, and account issue resolution.</li>
+              <li><i class="fas fa-circle"></i> Maintained <strong>96% customer satisfaction</strong> for 6 consecutive months.</li>
             </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
       </div>
@@ -553,28 +752,156 @@
       <div class="edu-achievement">
         <div class="edu-block">
           <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-          <p><strong>B.A. in Business Administration</strong><br>Don Mariano Marcos Memorial State University, La Union · 2015</p>
-          <p style="margin-top: 0.3rem;"><strong>Philippine Junior Marketing Association</strong><br>Regional Director for Northern Luzon · 2015</p>
+          <p><strong>B.A. in Business Administration</strong><br>Don Mariano Marcos Memorial State University, La Union, PH · 2015</p>
+          <p style="margin-top: 0.3rem;"><strong>Philippine Junior Marketing Association</strong><br>Regional Director for Northern Luzon · 2014-2015</p>
         </div>
         <div class="achieve-block">
           <h4><i class="fas fa-trophy"></i> Key Achievement</h4>
-          <div class="big-number">BEST <small>TEAM LEAD</small></div>
-          <div class="achieve-desc">Led collections team to <strong>70%</strong> collections rate while maintaining positive client relationships and exceeding SLAs.</div>
+          <div class="big-number">TOP <small>Team Lead</small></div>
+          <div class="achieve-desc">Led collections team to <strong>71%</strong> collections rate for the quarter while maintaining positive client relationships and exceeding SLAs.</div>
         </div>
       </div>
 
       <!-- Metric highlight -->
-      <div style="margin-top: 1.5rem; background: #f8f1eb; border-radius: 40px; padding: 0.8rem 1.8rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.9rem; border: 1px solid #e8ddd5;">
-        <span><i class="fas fa-arrow-up" style="color:#d4af7d;"></i> <strong>↑32%</strong> team target exceeded</span>
-        <span><i class="fas fa-users" style="color:#d4af7d;"></i> <strong>12</strong> direct reports</span>
-        <span><i class="fas fa-clock" style="color:#d4af7d;"></i> <strong>28%</strong> faster dispatch</span>
-        <span><i class="fas fa-smile" style="color:#d4af7d;"></i> <strong>98%</strong> client retention</span>
+      <div class="metric-bar">
+        <span><i class="fas fa-arrow-up"></i> <strong>↑32%</strong> team target exceeded</span>
+        <span><i class="fas fa-users"></i> <strong>12</strong> direct reports</span>
+        <span><i class="fas fa-clock"></i> <strong>28%</strong> faster dispatch</span>
+        <span><i class="fas fa-smile"></i> <strong>98%</strong> client retention</span>
       </div>
-
-      <div style="margin-top: 0.8rem; text-align: right; font-size: 0.75rem; color: #7a6a6a; letter-spacing: 0.5px;">
-        <i class="fas fa-heart" style="color: #d4af7d;"></i> built with purpose · lead with empathy
+      <div class="footer-note">
+        <i class="fas fa-heart"></i> built with purpose · lead with empathy
       </div>
     </div>
   </div>
+
+  <!-- ========== OVERLAY / DETAIL MODAL ========== -->
+  <div class="overlay" id="detailOverlay">
+    <div class="overlay-card">
+      <button class="close-btn" id="closeOverlayBtn">&times;</button>
+      <div id="overlayContent">
+        <!-- dynamically filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // ----- DETAIL DATA -----
+      const jobDetails = {
+        'dispatch': {
+          title: 'Dispatch Representative',
+          company: 'Automotive Group · Vernon, CA (Remote)',
+          date: '2024 – Present',
+          details: [
+            'Title & Paperwork Review: Verify and process all dispatch documentation for accuracy and compliance.',
+            'Client Pickup/Drop-off Scheduling: Coordinate and optimize daily schedules for 50+ field technicians across 4 states.',
+            'Documentation & Compliance: Ensure all records meet regulatory standards and company policies.',
+            'Reduced average response time by 28% through optimized routing and real-time tracking.',
+            'Implement real-time tracking system, improving client satisfaction by 20%.',
+            'Collaborate with logistics team to resolve scheduling conflicts and ensure on-time deliveries.'
+          ]
+        },
+        'client-services': {
+          title: 'Senior Client Services Representative',
+          company: 'Mirion Technologies · Los Angeles, CA (Remote)',
+          date: '2022 – 2024',
+          details: [
+            'Client Account Management: Conduct regular meetings with clients to present RAILs and provide account updates. Proactively manage accounts by sending Health Check Reports and identifying non-communicating devices.',
+            'Issue Resolution & Support: Investigate and resolve billing discrepancies, crediting concerns, and complex client inquiries with professionalism and speed.',
+            'Cross-Functional Collaboration: Partner with sales, collections, and enterprise teams to resolve issues and improve client experience.',
+            'Documentation & Compliance: Oversee Commercial Invoices, Air Waybills, and customs documentation for international shipments, ensuring full regulatory compliance.',
+            'Client Communication: Write clear and professional email correspondence and make calls to provide timely resolutions.',
+            'Achieved 98% client retention through proactive communication and timely resolution.'
+          ]
+        },
+        'collections': {
+          title: 'Collections Team Lead',
+          company: 'Hyundai Capital America · Remote',
+          date: '2017 – 2021',
+          details: [
+            'Team Performance & SLAs: Ensure team meets or exceeds service levels through weekly coaching sessions and continuous improvement initiatives.',
+            'Mentorship & Escalation: Provide direction and sound advice to team members; respond timely to escalations and mentor direct reports.',
+            'Accountability & Reporting: Monitor team performance, plan and assign work, and escalate pending issues (e.g., employment, process breakdown) to Account Manager.',
+            'Led team of 12 collectors, exceeding quarterly targets by 32% and reducing delinquency rates by 25%.',
+            'Developed training materials that improved team productivity by 40%.',
+            'Collaborate with supervisor to plan, assign, and direct work for the team.'
+          ]
+        },
+        'digital-support': {
+          title: 'Digital & Web Support',
+          company: 'Tribune Publishing (TRONC) · Remote',
+          date: '2015',
+          details: [
+            'Customer Guidance: Guide customers on subscription access issues and provide navigation tutorials for digital platforms.',
+            'Troubleshooting: Deliver basic troubleshooting steps to resolve login, payment, and account-related issues.',
+            'Maintained 96% customer satisfaction score for 6 consecutive months.',
+            'Recognized as \"Rookie of the Month\" for exceptional problem-solving.',
+            'Document and track customer issues using Zendesk ticketing system.'
+          ]
+        }
+      };
+
+      // ----- ELEMENTS -----
+      const overlay = document.getElementById('detailOverlay');
+      const overlayContent = document.getElementById('overlayContent');
+      const closeBtn = document.getElementById('closeOverlayBtn');
+
+      // ----- OPEN OVERLAY -----
+      function openDetail(targetKey) {
+        const data = jobDetails[targetKey];
+        if (!data) return;
+
+        // build HTML
+        let html = `
+          <h2>${data.title}</h2>
+          <div class="overlay-company">${data.company}</div>
+          <span class="overlay-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>${data.date}</span>
+          <ul class="overlay-detail-list">
+        `;
+        data.details.forEach(item => {
+          html += `<li><i class="fas fa-circle"></i> ${item}</li>`;
+        });
+        html += `</ul>`;
+        overlayContent.innerHTML = html;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // ----- CLOSE OVERLAY -----
+      function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // ----- EVENT LISTENERS -----
+      // click on any exp-item
+      document.querySelectorAll('.exp-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          const target = this.getAttribute('data-target');
+          if (target) {
+            openDetail(target);
+          }
+        });
+      });
+
+      // close button
+      closeBtn.addEventListener('click', closeOverlay);
+
+      // click outside content to close
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeOverlay();
+        }
+      });
+
+      // ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+          closeOverlay();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
