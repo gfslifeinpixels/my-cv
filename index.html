@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Empowered CV · Client Services & Operations Leader</title>
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -18,33 +18,34 @@
     }
 
     body {
-      background: #1a1a2e;
+      background: #14141f;
       font-family: 'Lato', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 2rem 1rem;
+      line-height: 1.5;
     }
 
+    /* main card – softer shadows, refined grid */
     .cv-card {
-      max-width: 1100px;
+      max-width: 1120px;
       width: 100%;
       background: #fcf9f7;
-      border-radius: 32px;
-      box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5);
+      border-radius: 36px;
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 125, 0.15);
       display: grid;
       grid-template-columns: 30% 70%;
       overflow: hidden;
       transition: all 0.2s;
-      border: 1px solid rgba(212, 175, 125, 0.2);
     }
 
     /* ---------- LEFT PANEL ---------- */
     .left-panel {
-      background: #2c1e2b;
-      color: #f2e6e6;
-      padding: 2.2rem 1.8rem;
+      background: #231c26;
+      color: #ede6e6;
+      padding: 2.4rem 1.8rem;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -55,24 +56,27 @@
     }
 
     .avatar-icon {
-      font-size: 3.8rem;
-      color: #d4af7d;
-      background: #3f2a3a;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
-      margin-bottom: 1.2rem;
       border: 3px solid #d4af7d;
-      box-shadow: 0 0 0 4px #3f2a3a;
+      box-shadow: 0 0 0 4px #3a2a3a;
+      overflow: hidden;
+      margin-bottom: 1.4rem;
+      background: #2f212e;
+      transition: box-shadow 0.2s;
+    }
+    .avatar-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .profile-header h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       letter-spacing: -0.5px;
       color: white;
       line-height: 1.1;
@@ -82,31 +86,28 @@
     .profile-header .title {
       font-weight: 400;
       color: #d4af7d;
-      font-size: 1rem;
-      letter-spacing: 1.5px;
+      font-size: 0.95rem;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
-      margin-bottom: 1.2rem;
-      border-bottom: 2px solid #d4af7d55;
+      margin-bottom: 1.4rem;
+      border-bottom: 2px solid rgba(212, 175, 125, 0.25);
       padding-bottom: 0.6rem;
     }
 
-    /* ----- Clickable contact items ----- */
     .contact-item {
       display: flex;
       align-items: center;
       gap: 0.8rem;
       font-size: 0.9rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       color: #ddd0d0;
     }
-
     .contact-item i {
       width: 20px;
       color: #d4af7d;
       font-size: 1rem;
       flex-shrink: 0;
     }
-
     .contact-item a {
       color: #ddd0d0;
       text-decoration: none;
@@ -116,18 +117,9 @@
       gap: 0.8rem;
       width: 100%;
     }
-
     .contact-item a:hover {
       color: #d4af7d;
     }
-
-    .contact-item a i {
-      width: 20px;
-      color: #d4af7d;
-      font-size: 1rem;
-    }
-
-    /* Non-link contact items (location) */
     .contact-item .no-link {
       display: flex;
       align-items: center;
@@ -138,19 +130,24 @@
     .section-title {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #d4af7d;
       margin-bottom: 1.2rem;
-      border-bottom: 2px solid #d4af7d55;
+      border-bottom: 2px solid rgba(212, 175, 125, 0.25);
       padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title i {
+      font-size: 0.95rem;
     }
 
     .skill-item {
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.2rem;
     }
-
     .skill-item .skill-label {
       display: flex;
       justify-content: space-between;
@@ -159,28 +156,27 @@
       color: #e6d9d9;
       margin-bottom: 4px;
     }
-
     .progress-bar {
       width: 100%;
       height: 7px;
-      background: #3f2a3a;
-      border-radius: 10px;
+      background: #3a2a3a;
+      border-radius: 20px;
       overflow: hidden;
     }
-
     .progress-fill {
       height: 100%;
-      border-radius: 10px;
+      border-radius: 20px;
       background: linear-gradient(90deg, #d4af7d, #e8c9a3);
       width: 0%;
     }
 
-    .cert-list, .tools-list {
+    .cert-list,
+    .tools-list {
       list-style: none;
       margin-top: 0.2rem;
     }
-
-    .cert-list li, .tools-list li {
+    .cert-list li,
+    .tools-list li {
       margin-bottom: 0.6rem;
       font-size: 0.9rem;
       display: flex;
@@ -188,11 +184,20 @@
       gap: 0.6rem;
       color: #e6d9d9;
     }
-
-    .cert-list i, .tools-list i {
+    .cert-list i,
+    .tools-list i {
       color: #d4af7d;
       width: 18px;
       font-size: 0.9rem;
+    }
+    .cert-list a.hidden-link {
+      color: #e6d9d9;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(212, 175, 125, 0.3);
+      transition: color 0.2s;
+    }
+    .cert-list a.hidden-link:hover {
+      color: #d4af7d;
     }
 
     .tools-list {
@@ -200,32 +205,31 @@
       flex-wrap: wrap;
       gap: 0.5rem 0.3rem;
     }
-
     .tools-list li {
-      background: #3f2a3a;
-      padding: 0.2rem 0.9rem;
-      border-radius: 20px;
+      background: #3a2a3a;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
       font-size: 0.8rem;
       color: #f2e6e6;
-      border: 1px solid #d4af7d55;
+      border: 1px solid rgba(212, 175, 125, 0.3);
       margin-bottom: 0;
     }
-
     .tools-list i {
       margin-right: 4px;
     }
 
     .empower-badge {
       background: #f8f1eb;
-      padding: 0.6rem 1.2rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 40px;
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
       font-size: 0.8rem;
-      color: #2c1e2b;
-      border: 1px solid #d4af7d55;
+      color: #231c26;
+      border: 1px solid rgba(212, 175, 125, 0.3);
       margin-top: 0.6rem;
+      font-weight: 600;
     }
     .empower-badge i {
       color: #d4af7d;
@@ -239,35 +243,33 @@
 
     .summary {
       background: #f8f1eb;
-      padding: 1.2rem 1.8rem;
-      border-radius: 16px;
+      padding: 1.4rem 2rem;
+      border-radius: 20px;
       border-left: 6px solid #d4af7d;
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
       position: relative;
     }
-
     .summary p {
       font-size: 1rem;
       line-height: 1.7;
-      color: #2c1e2b;
+      color: #1f1a22;
       font-weight: 400;
     }
-
     .summary i {
       color: #d4af7d;
       margin-right: 0.5rem;
     }
-
     .summary .empower-tag {
       display: inline-block;
-      background: #2c1e2b;
+      background: #231c26;
       color: #d4af7d;
-      padding: 0.2rem 1rem;
+      padding: 0.2rem 1.2rem;
       border-radius: 30px;
       font-size: 0.7rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-top: 0.4rem;
+      font-weight: 600;
     }
 
     /* ----- Experience Items (clickable) ----- */
@@ -278,17 +280,15 @@
       border-bottom: 1px solid #f0e8e2;
       padding-bottom: 1.5rem;
       cursor: pointer;
-      transition: background 0.15s ease;
-      border-radius: 8px;
+      transition: background 0.15s ease, transform 0.1s;
+      border-radius: 12px;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
-
     .exp-item:hover {
       background: #f8f1eb;
-      border-radius: 8px;
+      transform: translateX(4px);
     }
-
     .exp-item:last-child {
       border-bottom: none;
       margin-bottom: 0;
@@ -297,31 +297,33 @@
 
     .exp-icon {
       background: #d4af7d;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #2c1e2b;
+      color: #231c26;
       font-size: 1.3rem;
       flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .exp-item:hover .exp-icon {
+      background: #c9a26e;
     }
 
     .exp-content h3 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 1.1rem;
-      color: #2c1e2b;
+      color: #231c26;
     }
-
     .exp-content .company {
       font-weight: 600;
       color: #d4af7d;
       font-size: 0.9rem;
       margin-bottom: 0.2rem;
     }
-
     .exp-content .date {
       font-size: 0.8rem;
       color: #7a6a6a;
@@ -329,36 +331,36 @@
       display: block;
       font-weight: 300;
     }
-
     .exp-content ul {
       list-style: none;
       margin-top: 0.3rem;
     }
-
     .exp-content ul li {
       font-size: 0.92rem;
-      color: #2c1e2b;
-      margin-bottom: 0.3rem;
+      color: #231c26;
+      margin-bottom: 0.25rem;
       display: flex;
       gap: 0.6rem;
       align-items: baseline;
     }
-
     .exp-content ul li i {
       color: #d4af7d;
-      font-size: 0.5rem;
+      font-size: 0.4rem;
       width: 14px;
       margin-top: 6px;
     }
-
     .click-hint {
       font-size: 0.7rem;
       color: #b0a0a0;
       margin-top: 0.2rem;
       display: inline-block;
+      letter-spacing: 0.3px;
+    }
+    .click-hint i {
+      margin-right: 4px;
     }
 
-    /* ---------- OVERLAY / DETAIL PAGE ---------- */
+    /* ---------- OVERLAY / DETAIL ---------- */
     .overlay {
       display: none;
       position: fixed;
@@ -366,18 +368,16 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(26, 26, 46, 0.85);
-      backdrop-filter: blur(6px);
+      background: rgba(20, 20, 31, 0.8);
+      backdrop-filter: blur(8px);
       z-index: 1000;
       justify-content: center;
       align-items: center;
       padding: 1.5rem;
     }
-
     .overlay.active {
       display: flex;
     }
-
     .overlay-card {
       background: #fcf9f7;
       max-width: 700px;
@@ -386,16 +386,20 @@
       overflow-y: auto;
       border-radius: 32px;
       padding: 2.5rem 2.8rem;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
       position: relative;
-      animation: fadeUp 0.3s ease;
+      animation: fadeUp 0.25s ease;
     }
-
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
     .overlay-card .close-btn {
       position: absolute;
       top: 1.2rem;
@@ -403,77 +407,148 @@
       font-size: 2rem;
       background: none;
       border: none;
-      color: #2c1e2b;
+      color: #231c26;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.25s, color 0.2s;
       padding: 0 0.5rem;
+      line-height: 1;
     }
     .overlay-card .close-btn:hover {
       transform: rotate(90deg);
       color: #d4af7d;
     }
-
     .overlay-card h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       font-size: 1.8rem;
-      color: #2c1e2b;
+      color: #231c26;
       margin-bottom: 0.2rem;
     }
-
     .overlay-card .overlay-company {
       font-weight: 600;
       color: #d4af7d;
       font-size: 1.1rem;
       margin-bottom: 0.3rem;
     }
-
     .overlay-card .overlay-date {
       font-size: 0.9rem;
       color: #7a6a6a;
       margin-bottom: 1.5rem;
       display: block;
     }
-
     .overlay-card .overlay-detail-list {
       list-style: none;
       margin-top: 0.5rem;
     }
-
     .overlay-card .overlay-detail-list li {
       font-size: 1rem;
-      color: #2c1e2b;
+      color: #231c26;
       margin-bottom: 0.7rem;
       display: flex;
       gap: 0.8rem;
       align-items: baseline;
       line-height: 1.5;
     }
-
     .overlay-card .overlay-detail-list li i {
       color: #d4af7d;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       width: 18px;
       margin-top: 6px;
       flex-shrink: 0;
     }
 
-    .overlay-card .overlay-sub {
-      font-weight: 600;
-      color: #2c1e2b;
-      margin-top: 1.2rem;
-      margin-bottom: 0.3rem;
+    /* education & achievement */
+    .edu-achievement {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed #e8ddd5;
+    }
+    .edu-block h4,
+    .achieve-block h4 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #231c26;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .edu-block h4 i,
+    .achieve-block h4 i {
+      color: #d4af7d;
+    }
+    .edu-block p {
+      font-size: 0.9rem;
+      color: #231c26;
+      line-height: 1.5;
+    }
+    .achieve-block .big-number {
+      background: #231c26;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+      border: 2px solid #d4af7d;
+      line-height: 1;
+    }
+    .achieve-block .big-number small {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+    .achieve-block .achieve-desc {
+      font-size: 0.9rem;
+      color: #231c26;
+    }
+
+    /* metric bar */
+    .metric-bar {
+      margin-top: 1.5rem;
+      background: #f8f1eb;
+      border-radius: 60px;
+      padding: 0.7rem 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      border: 1px solid #e8ddd5;
+      gap: 0.5rem 0;
+    }
+    .metric-bar span i {
+      color: #d4af7d;
+      margin-right: 4px;
+    }
+    .footer-note {
+      margin-top: 0.8rem;
+      text-align: right;
+      font-size: 0.75rem;
+      color: #7a6a6a;
+      letter-spacing: 0.5px;
+    }
+    .footer-note i {
+      color: #d4af7d;
+      margin-right: 4px;
     }
 
     /* responsive */
     @media (max-width: 780px) {
       .cv-card {
         grid-template-columns: 1fr;
+        border-radius: 28px;
       }
       .left-panel {
-        padding: 1.8rem;
+        padding: 2rem 1.8rem;
       }
       .right-panel {
         padding: 1.8rem;
@@ -486,103 +561,24 @@
         padding: 2rem 1.5rem;
       }
     }
-
     @media (max-width: 480px) {
       .exp-item {
         flex-direction: column;
         gap: 0.6rem;
       }
       .profile-header h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
       }
       .overlay-card h2 {
         font-size: 1.4rem;
       }
-    }
-
-    /* education & achievement */
-    .edu-achievement {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 2px dashed #e8ddd5;
-    }
-
-    .edu-block h4, .achieve-block h4 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #2c1e2b;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .edu-block h4 i, .achieve-block h4 i {
-      color: #d4af7d;
-    }
-
-    .edu-block p {
-      font-size: 0.9rem;
-      color: #2c1e2b;
-      line-height: 1.5;
-    }
-
-    .achieve-block .big-number {
-      background: #2c1e2b;
-      color: white;
-      padding: 0.5rem 0.8rem;
-      border-radius: 40px;
-      display: inline-block;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      margin-bottom: 0.3rem;
-      border: 2px solid #d4af7d;
-      line-height: 1;
-    }
-
-    .achieve-block .big-number small {
-      font-size: 1rem;
-      font-weight: 400;
-      margin-left: 4px;
-    }
-
-    .achieve-block .achieve-desc {
-      font-size: 0.9rem;
-      color: #2c1e2b;
-    }
-
-    /* metric highlight */
-    .metric-bar {
-      margin-top: 1.5rem;
-      background: #f8f1eb;
-      border-radius: 40px;
-      padding: 0.8rem 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9rem;
-      border: 1px solid #e8ddd5;
-    }
-    .metric-bar span i {
-      color: #d4af7d;
-    }
-    .footer-note {
-      margin-top: 0.8rem;
-      text-align: right;
-      font-size: 0.75rem;
-      color: #7a6a6a;
-      letter-spacing: 0.5px;
-    }
-    .footer-note i {
-      color: #d4af7d;
+      .metric-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 30px;
+        padding: 0.8rem 1.5rem;
+        gap: 0.3rem;
+      }
     }
   </style>
 </head>
@@ -591,41 +587,34 @@
     <!-- LEFT PANEL -->
     <div class="left-panel">
       <div class="profile-header">
-<div class="avatar-icon" style="background: none; border: 3px solid #d4af7d; overflow: hidden; padding: 0;">
-  <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787184000&v=beta&t=suUwMulXW-ZANsK7JpuCKw1Ii1tXg_JGtv2HHpM_6vQ" alt="Gee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-</div>
-        <h1>Grace <br>Pagaduan</h1>
-        <div class="title">Client Services & Operations Leader</div>
+        <div class="avatar-icon">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787184000&v=beta&t=suUwMulXW-ZANsK7JpuCKw1Ii1tXg_JGtv2HHpM_6vQ" alt="Grace Pagaduan" />
+        </div>
+        <h1>Grace <br />Pagaduan</h1>
+        <div class="title">Client Services &amp; Operations Leader</div>
 
-        <!-- Email – click to open draft -->
         <div class="contact-item">
           <a href="mailto:pagaduan.graceflorenda@gmail.com" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-envelope"></i> pagaduan.graceflorenda@gmail.com
           </a>
         </div>
-
-        <!-- Phone – click to dial -->
         <div class="contact-item">
           <a href="tel:+63490125198" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-phone-alt"></i> +63490125198
+            <i class="fas fa-phone-alt"></i> +63 490 125 198
           </a>
         </div>
-
-        <!-- LinkedIn – click to open profile -->
         <div class="contact-item">
           <a href="https://linkedin.com/in/thegfsadvise" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i> linkedin.com/in/thegfsadvise
           </a>
         </div>
-
-        <!-- Location – not clickable -->
         <div class="contact-item">
           <span class="no-link"><i class="fas fa-map-pin"></i> Mandaluyong, PH 1550</span>
         </div>
       </div>
 
       <div>
-        <div class="section-title"><i class="fas fa-chart-line" style="margin-right: 8px;"></i> Core Competencies</div>
+        <div class="section-title"><i class="fas fa-chart-line"></i> Core Competencies</div>
         <div class="skill-item">
           <div class="skill-label"><span>Client Relations</span> <span>95%</span></div>
           <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
@@ -635,27 +624,27 @@
           <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-label"><span>Collections & Recovery</span> <span>88%</span></div>
+          <div class="skill-label"><span>Collections &amp; Recovery</span> <span>88%</span></div>
           <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-label"><span>Dispatch & Logistics</span> <span>85%</span></div>
+          <div class="skill-label"><span>Dispatch &amp; Logistics</span> <span>85%</span></div>
           <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
         </div>
       </div>
 
       <div>
-        <div class="section-title"><i class="fas fa-certificate" style="margin-right: 8px;"></i> Certifications</div>
+        <div class="section-title"><i class="fas fa-certificate"></i> Certifications</div>
         <ul class="cert-list">
           <li><i class="fas fa-check-circle"></i> Customer Service Excellence</li>
-          <li><i class="fas fa-check-circle"></i> Leadership & Team Management</li>
-          <li><i class="fas fa-check-circle"></i> Negotiation & Conflict Resolution</li>
+          <li><i class="fas fa-check-circle"></i> Leadership &amp; Team Management</li>
+          <li><i class="fas fa-check-circle"></i> Negotiation &amp; Conflict Resolution</li>
           <li><i class="fas fa-check-circle"></i> <a href="https://csevs.csc.gov.ph/user/eligibility" target="_blank" rel="noopener noreferrer" class="hidden-link">Civil Service Professional Eligibility</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="section-title"><i class="fas fa-tools" style="margin-right: 8px;"></i> Tools</div>
+        <div class="section-title"><i class="fas fa-tools"></i> Tools</div>
         <ul class="tools-list">
           <li><i class="fas fa-phone"></i> Zendesk</li>
           <li><i class="fas fa-tasks"></i> ServiceNow</li>
@@ -665,7 +654,7 @@
         </ul>
       </div>
 
-      <div style="margin-top: 0.5rem;">
+      <div style="margin-top: 0.2rem;">
         <span class="empower-badge"><i class="fas fa-star"></i> #ClientAdvocate #ResultsDriven</span>
       </div>
     </div>
@@ -673,18 +662,18 @@
     <!-- RIGHT PANEL -->
     <div class="right-panel">
       <div class="summary">
-        <p><i class="fas fa-quote-left"></i> I believe every client interaction is an opportunity to build trust. With <strong>10+ years</strong> across service, collections, and operations, I turn complex challenges into seamless experiences that keep clients coming back." </p>
+        <p><i class="fas fa-quote-left"></i> I believe every client interaction is an opportunity to build trust. With <strong>10+ years</strong> across service, collections, and operations, I turn complex challenges into seamless experiences that keep clients coming back.</p>
         <div class="empower-tag"><i class="fas fa-female" style="margin-right: 4px;"></i> mentor · process improvement</div>
       </div>
 
       <!-- Experience -->
       <div>
-        <div class="section-title" style="color: #2c1e2b; border-bottom-color: #d4af7d; margin-bottom: 1.2rem;">
-          <i class="fas fa-briefcase" style="margin-right: 8px; color:#d4af7d;"></i> Experience 
+        <div class="section-title" style="color: #231c26; border-bottom-color: #d4af7d; margin-bottom: 1.2rem;">
+          <i class="fas fa-briefcase" style="color:#d4af7d;"></i> Experience
           <span style="font-size:0.7rem; font-weight:400; color:#b0a0a0; margin-left:8px;">(click any role for details)</span>
         </div>
 
-        <!-- Dispatch Representative -->
+        <!-- Dispatch -->
         <div class="exp-item" data-target="dispatch">
           <div class="exp-icon"><i class="fas fa-truck"></i></div>
           <div class="exp-content">
@@ -692,7 +681,7 @@
             <div class="company">Automotive Group · Vernon, CA (Remote)</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2024 – Present</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Title & Paperwork Review:</strong> Verify and process all dispatch documentation.</li>
+              <li><i class="fas fa-circle"></i> <strong>Title &amp; Paperwork Review:</strong> Verify and process all dispatch documentation.</li>
               <li><i class="fas fa-circle"></i> <strong>Client Pickup/Drop-off Scheduling:</strong> Coordinate daily schedules for 50+ technicians.</li>
               <li><i class="fas fa-circle"></i> Reduced average response time by <strong>28%</strong> through optimized routing.</li>
             </ul>
@@ -724,8 +713,8 @@
             <div class="company">Hyundai Capital America · Remote</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2017 – 2021</span>
             <ul>
-              <li><i class="fas fa-circle"></i> <strong>Team Performance & SLAs:</strong> Coaching, monitoring, and continuous improvement.</li>
-              <li><i class="fas fa-circle"></i> <strong>Mentorship & Escalation:</strong> Provide direction and timely escalation handling.</li>
+              <li><i class="fas fa-circle"></i> <strong>Team Performance &amp; SLAs:</strong> Coaching, monitoring, and continuous improvement.</li>
+              <li><i class="fas fa-circle"></i> <strong>Mentorship &amp; Escalation:</strong> Provide direction and timely escalation handling.</li>
               <li><i class="fas fa-circle"></i> Exceeded quarterly targets by <strong>32%</strong>; reduced delinquency by 25%.</li>
             </ul>
             <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
@@ -736,7 +725,7 @@
         <div class="exp-item" data-target="digital-support">
           <div class="exp-icon"><i class="fas fa-laptop"></i></div>
           <div class="exp-content">
-            <h3>Digital & Web Support</h3>
+            <h3>Digital &amp; Web Support</h3>
             <div class="company">Tribune Publishing (TRONC) · Remote</div>
             <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2015</span>
             <ul>
@@ -753,8 +742,8 @@
       <div class="edu-achievement">
         <div class="edu-block">
           <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-          <p><strong>B.A. in Business Administration</strong><br>Don Mariano Marcos Memorial State University, La Union, PH · 2015</p>
-          <p style="margin-top: 0.3rem;"><strong>Philippine Junior Marketing Association</strong><br>Regional Director for Northern Luzon · 2014-2015</p>
+          <p><strong>B.A. in Business Administration</strong><br />Don Mariano Marcos Memorial State University, La Union, PH · 2015</p>
+          <p style="margin-top: 0.3rem;"><strong>Philippine Junior Marketing Association</strong><br />Regional Director for Northern Luzon · 2014-2015</p>
         </div>
         <div class="achieve-block">
           <h4><i class="fas fa-trophy"></i> Key Achievement</h4>
@@ -776,19 +765,16 @@
     </div>
   </div>
 
-  <!-- ========== OVERLAY / DETAIL MODAL ========== -->
+  <!-- ========== OVERLAY ========== -->
   <div class="overlay" id="detailOverlay">
     <div class="overlay-card">
       <button class="close-btn" id="closeOverlayBtn">&times;</button>
-      <div id="overlayContent">
-        <!-- dynamically filled by JS -->
-      </div>
+      <div id="overlayContent"></div>
     </div>
   </div>
 
   <script>
     (function() {
-      // ----- DETAIL DATA -----
       const jobDetails = {
         'dispatch': {
           title: 'Dispatch Coordinator',
@@ -837,23 +823,19 @@
             'Customer Guidance: Guide customers on subscription access issues and provide navigation tutorials for digital platforms.',
             'Troubleshooting: Deliver basic troubleshooting steps to resolve login, payment, and account-related issues.',
             'Maintained 96% customer satisfaction score for 6 consecutive months.',
-            'Recognized as \"Rookie of the Month\" for exceptional problem-solving.',
+            'Recognized as "Rookie of the Month" for exceptional problem-solving.',
             'Document and track customer issues using Zendesk ticketing system.'
           ]
         }
       };
 
-      // ----- ELEMENTS -----
       const overlay = document.getElementById('detailOverlay');
       const overlayContent = document.getElementById('overlayContent');
       const closeBtn = document.getElementById('closeOverlayBtn');
 
-      // ----- OPEN OVERLAY -----
       function openDetail(targetKey) {
         const data = jobDetails[targetKey];
         if (!data) return;
-
-        // build HTML
         let html = `
           <h2>${data.title}</h2>
           <div class="overlay-company">${data.company}</div>
@@ -869,38 +851,24 @@
         document.body.style.overflow = 'hidden';
       }
 
-      // ----- CLOSE OVERLAY -----
       function closeOverlay() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
       }
 
-      // ----- EVENT LISTENERS -----
-      // click on any exp-item
       document.querySelectorAll('.exp-item').forEach(item => {
         item.addEventListener('click', function(e) {
           const target = this.getAttribute('data-target');
-          if (target) {
-            openDetail(target);
-          }
+          if (target) openDetail(target);
         });
       });
 
-      // close button
       closeBtn.addEventListener('click', closeOverlay);
-
-      // click outside content to close
       overlay.addEventListener('click', function(e) {
-        if (e.target === this) {
-          closeOverlay();
-        }
+        if (e.target === this) closeOverlay();
       });
-
-      // ESC key
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) {
-          closeOverlay();
-        }
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeOverlay();
       });
     })();
   </script>
