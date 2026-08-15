@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>✨ DIY SEOUL · pop infographic by Grace ✨</title>
-  <!-- Google Fonts: modern + fun -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empowered CV · Client Services & Operations Leader</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    /* ===== RESET & BASE ===== */
+    /* ... (Your existing CSS remains unchanged) ... */
     * {
       margin: 0;
       padding: 0;
@@ -16,2115 +19,950 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      padding: 12px;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background-color: #fce4ec;
-      background-image: url('https://media.easy-peasy.ai/045043b6-37d3-414c-aa75-b0d7b65a23de/9ee3aa97-91b1-47ec-8c84-b34ea3263a7c_medium.webp');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      animation: moveBg 22s linear infinite alternate;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: rgba(255, 240, 245, 0.15);
-      backdrop-filter: blur(1px);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    @keyframes moveBg {
-      0% { background-position: 0% 0%; }
-      100% { background-position: 100% 100%; }
-    }
-
-    /* ===== SPLASH SCREEN (Cherry Blossom) ===== */
-    #splashScreen {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
+      background: #14141f;
+      font-family: 'Lato', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: url('https://media.easy-peasy.ai/045043b6-37d3-414c-aa75-b0d7b65a23de/9ee3aa97-91b1-47ec-8c84-b34ea3263a7c_medium.webp');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      animation: moveBg 22s linear infinite alternate;
-      cursor: pointer;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+
+    .cv-card {
+      max-width: 1120px;
+      width: 100%;
+      background: #fcf9f7;
+      border-radius: 36px;
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 125, 0.15);
+      display: grid;
+      grid-template-columns: 30% 70%;
       overflow: hidden;
-      padding: 20px;
-      text-align: center;
+      transition: all 0.2s;
+      margin-bottom: 2rem;
     }
 
-    #splashScreen::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 240, 245, 0.25);
-      backdrop-filter: blur(2px);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    #splashScreen.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    #splashScreen .splash-content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-      padding: 20px;
-    }
-
-    #splashScreen .splash-title {
-      font-family: 'Fredoka One', cursive;
-      font-size: 3rem;
-      color: #1a2a6c;
-      text-shadow: 4px 4px 0 #ffec9e, 6px 6px 0 #ffffffb0;
-      margin-bottom: 6px;
-    }
-
-    #splashScreen .splash-sub {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #d94f7a;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
-    }
-
-    #splashScreen .splash-sub i {
-      color: #ff6b9d;
-    }
-
-    /* ===== COUNTDOWN ===== */
-    .countdown-container {
+    .left-panel {
+      background: #231c26;
+      color: #ede6e6;
+      padding: 2.4rem 1.8rem;
       display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin: 10px 0 18px 0;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 2rem;
     }
 
-    .countdown-box {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(4px);
-      border-radius: 16px;
-      padding: 8px 14px;
-      min-width: 70px;
-      border: 2px solid #ffd966;
-      box-shadow: 0 4px 12px rgba(255, 80, 120, 0.15);
-    }
-
-    .countdown-box .num {
-      font-family: 'Fredoka One', cursive;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a2a6c;
-      line-height: 1.1;
-    }
-
-    .countdown-box .label {
-      font-size: 0.6rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #d94f7a;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== CHECKLIST STYLING ===== */
-    .checklist-container {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(8px);
-      border-radius: 30px;
-      padding: 24px 28px;
-      border: 3px solid #ffd966;
-      box-shadow: 0 12px 30px rgba(255, 80, 120, 0.2);
+    .profile-header {
       text-align: left;
-      margin-bottom: 20px;
     }
 
-    .checklist-container h3 {
-      font-family: 'Fredoka One', cursive;
-      color: #1a2a6c;
-      font-size: 1.3rem;
-      margin-bottom: 12px;
+    .avatar-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid #d4af7d;
+      box-shadow: 0 0 0 4px #3a2a3a;
+      overflow: hidden;
+      margin-bottom: 1.4rem;
+      background: #2f212e;
+      transition: box-shadow 0.2s;
+    }
+    .avatar-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+
+    .profile-header .title {
+      font-weight: 400;
+      color: #d4af7d;
+      font-size: 0.95rem;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+      border-bottom: 2px solid rgba(212, 175, 125, 0.25);
+      padding-bottom: 0.6rem;
+    }
+
+    .contact-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #ddd0d0;
     }
-
-    .checklist-container h3 i {
-      color: #ff6b9d;
+    .contact-item i {
+      width: 20px;
+      color: #d4af7d;
+      font-size: 1rem;
+      flex-shrink: 0;
     }
-
-    .checklist-item {
+    .contact-item a {
+      color: #ddd0d0;
+      text-decoration: none;
+      transition: color 0.2s;
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 8px 0;
-      font-weight: 600;
-      color: #3e2416;
-      border-bottom: 1px dashed #f0dcc8;
+      gap: 0.8rem;
+      width: 100%;
+    }
+    .contact-item a:hover {
+      color: #d4af7d;
+    }
+    .contact-item .no-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #d4af7d;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid rgba(212, 175, 125, 0.25);
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title i {
       font-size: 0.95rem;
     }
 
-    .checklist-item:last-child {
-      border-bottom: none;
+    .skill-item {
+      margin-bottom: 1.2rem;
     }
-
-    .checklist-item i {
-      width: 22px;
-      color: #d94f7a;
-      font-size: 1.1rem;
-    }
-
-    .checklist-item .check-icon {
-      color: #28a745;
-    }
-
-    .checklist-item a {
-      color: #b1582b;
-      text-decoration: none;
-      font-weight: 700;
-      border-bottom: 2px dotted #b1582b;
-    }
-
-    .checklist-item a:hover {
-      color: #6b2e1a;
-    }
-
-    #splashScreen .tap-hint {
+    .skill-item .skill-label {
+      display: flex;
+      justify-content: space-between;
       font-size: 0.9rem;
-      color: #1a2a6c;
-      font-weight: 700;
-      animation: pulse 2s ease-in-out infinite;
-      margin-top: 8px;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(4px);
-      padding: 8px 20px;
-      border-radius: 40px;
-      display: inline-block;
-    }
-
-    #splashScreen .tap-hint i {
-      color: #d94f7a;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.6; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-
-    /* ===== CHERRY BLOSSOM PETALS (Canvas) ===== */
-    #petalCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* ===== MAIN CONTENT (hidden initially) ===== */
-    #mainContent {
-      opacity: 0;
-      transition: opacity 1s ease;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    #mainContent.visible {
-      opacity: 1;
-    }
-
-    .pop-card {
-      max-width: 1000px;
-      width: 100%;
-      background: transparent;
-      border-radius: 50px 50px 40px 40px;
-      box-shadow: 0 20px 30px rgba(255, 80, 120, 0.25),
-                  0 0 0 8px rgba(255, 246, 230, 0.7),
-                  0 0 0 14px rgba(255, 143, 171, 0.6);
-      padding: 24px 18px 20px;
-      border: 4px solid rgba(255, 217, 102, 0.85);
-      animation: float 6s ease-in-out infinite;
-      position: relative;
-      z-index: 2;
-      margin: 6px 0 20px;
-    }
-
-    .sticky-title, .header, .inclusion-strip, .day-card, .footer-modern, .modal-content {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(4px);
-    }
-
-    .sticky-title {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0px); }
-    }
-
-    /* ===== STICKY TITLE ===== */
-    .sticky-title {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-radius: 30px 30px 16px 16px;
-      padding: 4px 10px 2px 10px;
-      margin: -6px -6px 0 -6px;
-      box-shadow: 0 4px 14px rgba(255, 80, 120, 0.10);
-      border-bottom: 3px solid #ffd966;
-    }
-
-    .sticky-title .title-only {
-      padding: 4px 12px 2px 12px;
-      margin-bottom: 0;
-    }
-
-    .sticky-title .title-only h1 {
-      font-size: 1.9rem;
-      font-weight: 900;
-      font-family: 'Fredoka One', cursive;
-      color: #1a2a6c;
-      text-shadow: 3px 3px 0 #ffec9e, 4px 4px 0 #ffffffb0;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
-
-    /* ===== MAIN COUNTDOWN (top center of main page) ===== */
-    .main-countdown {
-      text-align: center;
-      padding: 6px 0 2px 0;
-      margin-top: -4px;
-    }
-
-    .main-countdown .countdown-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #d94f7a;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-weight: 400;
+      color: #e6d9d9;
       margin-bottom: 4px;
     }
-
-    .main-countdown .countdown-boxes {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .main-countdown .cd-box {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(4px);
-      border-radius: 12px;
-      padding: 4px 12px;
-      min-width: 56px;
-      border: 2px solid #ffd966;
-      box-shadow: 0 2px 8px rgba(255, 80, 120, 0.1);
-    }
-
-    .main-countdown .cd-box .num {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #1a2a6c;
-      line-height: 1.1;
-    }
-
-    .main-countdown .cd-box .label {
-      font-size: 0.5rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #d94f7a;
-      letter-spacing: 0.3px;
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-      background: rgba(255, 179, 198, 0.92);
-      padding: 14px 20px 12px 20px;
-      border-radius: 50px 16px 50px 16px;
-      border: 4px solid white;
-      box-shadow: 0 8px 0 #d94f7a, 0 16px 16px -8px #b34164;
-      backdrop-filter: blur(4px);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 2px;
-    }
-
-    .header-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .header-title-group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px 12px;
-    }
-
-    .grace-badge-compact {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #ff4080;
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 700;
-      padding: 5px 18px 5px 5px;
-      border-radius: 80px;
-      border: 3px solid #ffd966;
-      box-shadow: 0 4px 0 #a52d54;
-      font-family: 'Montserrat', sans-serif;
-      transition: transform 0.3s ease;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-    .grace-badge-compact:hover {
-      transform: scale(1.02);
-    }
-    .grace-badge-compact .avatar {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 2px solid white;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    .grace-badge-compact .badge-text {
-      display: inline-block;
-      line-height: 1.2;
-      letter-spacing: 0.2px;
-    }
-
-    /* ===== DATE & PRICE - with clickable price ===== */
-    .header-info-center {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 16px 24px;
-      padding: 4px 0 2px 0;
+    .progress-bar {
       width: 100%;
-    }
-
-    .date-badge-compact {
-      background: #ffdc5e;
-      color: #1e3163;
-      font-size: 1.05rem;
-      font-weight: 800;
-      padding: 4px 20px;
-      border-radius: 40px;
-      border: 3px solid white;
-      box-shadow: 0 4px 0 #c52155;
-      font-family: 'Montserrat', sans-serif;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .date-badge-compact:hover {
-      transform: scale(1.05);
-    }
-
-    .price-compact {
-      background: #ffc44f;
-      padding: 4px 20px;
-      border-radius: 40px;
-      font-weight: 900;
-      font-size: 1.05rem;
-      color: #1a2a6c;
-      border: 3px solid white;
-      box-shadow: 0 4px 0 #d45d00;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .price-compact:hover {
-      transform: scale(1.05);
-    }
-
-    /* ===== PARTICIPANTS MODAL ===== */
-    .participants-modal-body {
-      padding: 18px 24px 24px;
-      overflow-x: auto;
-    }
-    .participants-modal-body .table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .participants-modal-body table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      min-width: 420px;
-    }
-    .participants-modal-body table th {
-      background: #ffe28f;
-      color: #1a2a6c;
-      font-weight: 800;
-      padding: 10px 12px;
-      text-align: left;
-      border: 2px solid #fd6a7a;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .participants-modal-body table td {
-      padding: 10px 12px;
-      border: 2px solid #fd6a7a;
-      font-weight: 600;
-      color: #3e2416;
-      background: rgba(255, 255, 255, 0.7);
-    }
-    .participants-modal-body table tr:nth-child(even) td {
-      background: rgba(255, 247, 234, 0.7);
-    }
-    .participants-modal-body .participant-note {
-      margin-top: 14px;
-      background: #fbeba4;
-      border-radius: 30px;
-      padding: 8px 18px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #5a3a2a;
-      border-left: 4px solid #d94f7a;
-    }
-    .participants-modal-body .participant-note i {
-      color: #d94f7a;
-      margin-right: 8px;
-    }
-
-    /* ===== FLIGHT DETAILS MODAL ===== */
-    .flight-modal-body {
-      padding: 18px 24px 24px;
-    }
-    .flight-modal-body .flight-card {
-      background: #f8f0e8;
+      height: 7px;
+      background: #3a2a3a;
       border-radius: 20px;
-      padding: 16px 20px;
-      margin-bottom: 16px;
-      border-left: 6px solid #ffc44f;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
-    .flight-modal-body .flight-card:last-child {
+    .progress-fill {
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #d4af7d, #e8c9a3);
+      width: 0%;
+    }
+
+    .cert-list,
+    .tools-list {
+      list-style: none;
+      margin-top: 0.2rem;
+    }
+    .cert-list li,
+    .tools-list li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #e6d9d9;
+    }
+    .cert-list i,
+    .tools-list i {
+      color: #d4af7d;
+      width: 18px;
+      font-size: 0.9rem;
+    }
+    .cert-list a.hidden-link {
+      color: #e6d9d9;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(212, 175, 125, 0.3);
+      transition: color 0.2s;
+    }
+    .cert-list a.hidden-link:hover {
+      color: #d4af7d;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.3rem;
+    }
+    .tools-list li {
+      background: #3a2a3a;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #f2e6e6;
+      border: 1px solid rgba(212, 175, 125, 0.3);
       margin-bottom: 0;
     }
-    .flight-modal-body .flight-card .flight-no {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.3rem;
-      color: #1a2a6c;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .flight-modal-body .flight-card .flight-no i {
-      color: #ffc44f;
-      font-size: 1.5rem;
-    }
-    .flight-modal-body .flight-card .flight-route {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px 16px;
-      margin-top: 8px;
-      padding: 8px 0;
-      border-top: 1px dashed #d4925a;
-      border-bottom: 1px dashed #d4925a;
-    }
-    .flight-modal-body .flight-card .flight-route .leg {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .flight-modal-body .flight-card .flight-route .leg .time {
-      font-weight: 900;
-      font-size: 1.1rem;
-      color: #1a2a6c;
-    }
-    .flight-modal-body .flight-card .flight-route .leg .airport {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #5a3a2a;
-    }
-    .flight-modal-body .flight-card .flight-route .arrow-icon {
-      color: #d94f7a;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    .flight-modal-body .flight-card .flight-type {
-      display: inline-block;
-      background: #ffc44f;
-      color: #1a2a6c;
-      font-size: 0.65rem;
-      font-weight: 800;
-      padding: 2px 14px;
-      border-radius: 30px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 6px;
+    .tools-list i {
+      margin-right: 4px;
     }
 
-    /* ===== INCLUSIONS ===== */
-    .inclusion-strip {
-      background: rgba(193, 240, 255, 0.92);
+    .empower-badge {
+      background: #f8f1eb;
+      padding: 0.5rem 1.2rem;
       border-radius: 40px;
-      padding: 10px 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      color: #231c26;
+      border: 1px solid rgba(212, 175, 125, 0.3);
+      margin-top: 0.6rem;
+      font-weight: 600;
+    }
+    .empower-badge i {
+      color: #d4af7d;
+    }
+
+    .right-panel {
+      background: #ffffff;
+      padding: 2.2rem 2.5rem;
+    }
+
+    .summary {
+      background: #f8f1eb;
+      padding: 1.4rem 2rem;
+      border-radius: 20px;
+      border-left: 6px solid #d4af7d;
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .summary p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #1f1a22;
+      font-weight: 400;
+    }
+    .summary i {
+      color: #d4af7d;
+      margin-right: 0.5rem;
+    }
+    .summary .empower-tag {
+      display: inline-block;
+      background: #231c26;
+      color: #d4af7d;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      font-weight: 600;
+    }
+
+    .exp-item {
       display: flex;
-      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid #f0e8e2;
+      padding-bottom: 1.5rem;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s;
+      border-radius: 12px;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .exp-item:hover {
+      background: #f8f1eb;
+      transform: translateX(4px);
+    }
+    .exp-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .exp-icon {
+      background: #d4af7d;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px 12px;
-      border: 3px solid #fc8eb6;
-      box-shadow: inset 0 -3px 0 #aad0f5, 0 8px 10px #fac0d9;
-      margin: 12px 0 4px 0;
-      backdrop-filter: blur(4px);
-    }
-
-    .inc-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: white;
-      padding: 4px 14px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #283b73;
-      border: 2px solid #ff7c9f;
-      box-shadow: 0 3px 0 #fcbed6;
-      font-family: 'Montserrat', sans-serif;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-    }
-    .inc-item:hover {
-      transform: scale(1.02);
-    }
-    .inc-item i {
-      font-size: 1.1rem;
-      color: #d94f7a;
-    }
-    .inc-item a {
-      color: #283b73;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .inc-item a:hover {
-      color: #b23e6e;
-    }
-    .inc-item a i {
-      font-size: 1.1rem;
-      color: #d94f7a;
-    }
-
-    /* ===== DAY CARDS ===== */
-    .scroll-content {
-      padding-top: 2px;
-    }
-
-    .day-card {
-      margin: 18px 0;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 40px 16px 40px 16px;
-      border: 4px solid white;
-      box-shadow: 8px 12px 0 #d96b7c, 0 16px 16px -8px #803f4c;
-      overflow: hidden;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-    }
-    .day-card:hover {
-      transform: scale(1.01) rotate(0.2deg);
-    }
-
-    .day-header {
-      display: flex;
-      align-items: center;
-      gap: 8px 12px;
-      flex-wrap: wrap;
-      background: #ffe28f;
-      padding: 10px 16px;
-      border-bottom: 5px solid #fd6a7a;
-    }
-
-    .day-num {
-      background: #b23e6e;
-      color: white;
+      color: #231c26;
       font-size: 1.3rem;
-      font-weight: 900;
-      padding: 2px 16px;
-      border-radius: 50px;
-      border: 3px solid #ffe88e;
-      font-family: 'Fredoka One', cursive;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .exp-item:hover .exp-icon {
+      background: #c9a26e;
     }
 
-    .day-tour-name {
-      background: #1a2a6c;
-      color: white;
-      padding: 4px 14px;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      border: 3px solid #ffc857;
+    .exp-content h3 {
       font-family: 'Montserrat', sans-serif;
-      box-shadow: 0 3px 0 #0f1a44;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .day-tour-name:hover {
-      transform: scale(1.03);
-      background: #2a3a8c;
-    }
-    .day-tour-name a {
-      color: white;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .day-tour-name.special {
-      background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-      border-color: #ffeaa7;
-      box-shadow: 0 3px 0 #a53d1a;
-    }
-
-    .day-tour-name.departure {
-      background: linear-gradient(135deg, #2e86de, #1e3799);
-      border-color: #82ccdd;
-      box-shadow: 0 3px 0 #0f2b6b;
-    }
-
-    .day-date-tag {
-      background: #2f4858;
-      color: white;
-      padding: 3px 16px;
-      border-radius: 40px;
-      font-size: 0.85rem;
       font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      color: #231c26;
     }
-
-    .day-preview {
-      padding: 8px 16px 6px;
+    .exp-content .company {
       font-weight: 600;
-      color: #5a3a2a;
+      color: #d4af7d;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    .exp-content .date {
+      font-size: 0.8rem;
+      color: #7a6a6a;
+      margin-bottom: 0.5rem;
+      display: block;
+      font-weight: 300;
+    }
+    .exp-content ul {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+    .exp-content ul li {
+      font-size: 0.92rem;
+      color: #231c26;
+      margin-bottom: 0.25rem;
       display: flex;
-      gap: 8px 16px;
-      flex-wrap: wrap;
-      font-size: 0.85rem;
+      gap: 0.6rem;
+      align-items: baseline;
     }
-    .day-preview i {
-      color: #d94f7a;
+    .exp-content ul li i {
+      color: #d4af7d;
+      font-size: 0.4rem;
+      width: 14px;
+      margin-top: 6px;
     }
-
     .click-hint {
-      margin-left: auto;
-      color: #b1582b;
-      font-weight: 700;
       font-size: 0.7rem;
-      background: #f7e2b5;
-      padding: 2px 10px;
-      border-radius: 30px;
-      border: 2px solid #bb651e;
+      color: #b0a0a0;
+      margin-top: 0.2rem;
+      display: inline-block;
+      letter-spacing: 0.3px;
+    }
+    .click-hint i {
+      margin-right: 4px;
     }
 
-    /* ===== MODAL ===== */
-    .modal-overlay {
+    .overlay {
       display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(6px);
-      z-index: 9999;
+      background: rgba(20, 20, 31, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
       justify-content: center;
       align-items: center;
-      padding: 16px;
-      animation: fadeIn 0.25s ease;
+      padding: 1.5rem;
     }
-
-    .modal-overlay.active {
+    .overlay.active {
       display: flex;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .modal-content {
+    .overlay-card {
+      background: #fcf9f7;
       max-width: 700px;
       width: 100%;
       max-height: 90vh;
-      background: rgba(255, 247, 234, 0.96);
-      border-radius: 50px 20px 50px 20px;
-      border: 5px solid #ffd966;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
-                  0 0 0 6px #fbe6c5,
-                  0 0 0 12px #ff8fab;
       overflow-y: auto;
-      padding: 0;
-      animation: slideUp 0.25s ease;
-      font-family: 'Montserrat', sans-serif;
-      backdrop-filter: blur(8px);
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: #ffe28f;
-      border-radius: 48px 18px 0 0;
-      border-bottom: 5px solid #fd6a7a;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .modal-header .modal-title {
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: #1a2a6c;
-      font-family: 'Fredoka One', cursive;
-      line-height: 1.2;
-    }
-    .modal-header .modal-close {
-      background: #b23e6e;
-      color: white;
-      border: none;
-      font-size: 1.4rem;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 3px solid #ffd966;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .modal-header .modal-close:hover {
-      background: #8f2d4e;
-      transform: scale(1.08);
-    }
-
-    .modal-body {
-      padding: 18px 18px 24px;
-    }
-
-    .modal-body .time-activity-row {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      padding: 10px 0;
-      border-bottom: 2px dashed #d4925a;
-      flex-wrap: wrap;
-    }
-    .modal-body .time-activity-row:last-child {
-      border-bottom: none;
-    }
-    .modal-body .time-badge {
-      flex: 0 0 90px;
-      font-weight: 900;
-      font-size: 0.95rem;
-      color: #772f0e;
-      background: #f7dbbc;
-      padding: 4px 12px;
-      border-radius: 40px;
-      text-align: center;
-      border: 2px solid #b8602a;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .modal-body .activity-text {
-      flex: 1;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #3e2416;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .modal-body .activity-text i {
-      font-size: 1.3rem;
-      color: #d94f7a;
-      min-width: 28px;
-    }
-
-    .modal-body .mini-img-modal {
-      width: 48px;
-      height: 48px;
-      border-radius: 24px;
-      background-size: cover;
-      background-position: center;
-      border: 3px solid #ffa447;
-      flex-shrink: 0;
-    }
-
-    .modal-body .map-link {
-      color: #b1582b;
-      text-decoration: none;
-      font-weight: 700;
-      border-bottom: 2px dotted #b1582b;
-      font-size: 0.9rem;
-    }
-    .modal-body .map-link:hover {
-      color: #6b2e1a;
-    }
-
-    .modal-body .alert-note {
-      background: #fbeba4;
-      border-radius: 40px;
-      padding: 6px 18px;
-      border: 3px solid #d48b2c;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.9rem;
-    }
-
-    /* ===== TOURS MODAL (Klook) ===== */
-    .tours-modal-body {
-      padding: 18px 24px 24px;
-    }
-    .tours-modal-body h3 {
-      font-family: 'Fredoka One', cursive;
-      color: #1a2a6c;
-      font-size: 1.2rem;
-      margin: 16px 0 10px 0;
-      border-bottom: 3px solid #ffd966;
-      padding-bottom: 6px;
-    }
-    .tours-modal-body h3:first-of-type {
-      margin-top: 4px;
-    }
-    .tours-modal-body ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 12px 0;
-    }
-    .tours-modal-body ul li {
-      padding: 6px 0 6px 28px;
+      border-radius: 32px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
       position: relative;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #3e2416;
-      border-bottom: 1px dashed #f0dcc8;
+      animation: fadeUp 0.25s ease;
     }
-    .tours-modal-body ul li:last-child {
-      border-bottom: none;
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .tours-modal-body ul li::before {
-      content: '▹';
+    .overlay-card .close-btn {
       position: absolute;
-      left: 4px;
-      color: #d94f7a;
-      font-size: 1.1rem;
-    }
-    .tours-modal-body ul li a {
-      color: #b1582b;
-      text-decoration: none;
-      font-weight: 700;
-      border-bottom: 2px dotted #b1582b;
-      transition: color 0.2s;
-    }
-    .tours-modal-body ul li a:hover {
-      color: #6b2e1a;
-    }
-    .tours-modal-body .note-divider {
+      top: 1.2rem;
+      right: 1.8rem;
+      font-size: 2rem;
+      background: none;
       border: none;
-      height: 2px;
-      background: linear-gradient(to right, transparent, #ffd966, transparent);
-      margin: 16px 0;
-    }
-    .tours-modal-body .tour-note {
-      background: #f7f0e8;
-      border-radius: 30px;
-      padding: 10px 18px;
-      font-size: 0.85rem;
-      color: #5a3a2a;
-      border-left: 4px solid #d94f7a;
-      margin-top: 12px;
-    }
-    .tours-modal-body .tour-note i {
-      color: #d94f7a;
-      margin-right: 8px;
-    }
-
-    .footer-modern {
-      background: rgba(217, 79, 122, 0.92);
-      color: white;
-      padding: 16px 20px;
-      border-radius: 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 16px;
-      flex-wrap: wrap;
-      border: 4px solid #ffd966;
-      box-shadow: 0 8px 0 #8f2d4e;
-      font-family: 'Montserrat', sans-serif;
-      gap: 12px;
-      backdrop-filter: blur(4px);
-    }
-
-    .footer-contact {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      flex-wrap: wrap;
-    }
-
-    .footer-contact .contact-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #231c26;
       cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: transform 0.25s, color 0.2s;
+      padding: 0 0.5rem;
+      line-height: 1;
     }
-    .footer-contact .contact-avatar:hover {
-      transform: scale(1.08) rotate(-2deg);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-    }
-
-    .footer-contact .contact-name {
-      color: #fff5d6;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 0.95rem;
-      border-bottom: 2px solid #ffd966;
-      padding-bottom: 1px;
-      transition: color 0.3s ease;
-    }
-    .footer-contact .contact-name:hover {
-      color: #ffffff;
-    }
-
-    .footer-handle {
-      background: #1a2a6c;
-      padding: 6px 20px;
-      border-radius: 40px;
-      font-size: 1rem;
-      font-weight: 800;
-      border: 3px solid #ffc857;
-      font-family: 'Fredoka One', cursive;
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    .footer-handle .hashtag {
-      display: block;
-      font-size: 0.7rem;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      color: #ffd966;
-      letter-spacing: 1px;
-    }
-
-    .footnote {
-      text-align: center;
-      font-size: 0.55rem;
-      color: #2d1a1a;
-      margin-top: 10px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      opacity: 0.9;
-      font-family: 'Montserrat', sans-serif;
-      padding: 0 4px;
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 30px;
-      backdrop-filter: blur(2px);
-      padding: 4px 10px;
-      display: inline-block;
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .footnote i {
-      margin-right: 4px;
-      color: #d94f7a;
-    }
-
-    /* ===== ABOUT ME OVERLAY ===== */
-    .about-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      z-index: 99999;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 16px;
-      animation: fadeIn 0.3s ease;
-      overflow-y: auto;
-    }
-
-    .about-overlay.active {
-      display: flex;
-    }
-
-    .about-content {
-      max-width: 750px;
-      width: 100%;
-      max-height: 92vh;
-      background: linear-gradient(145deg, rgba(30, 30, 60, 0.96), rgba(20, 20, 45, 0.96));
-      backdrop-filter: blur(16px);
-      border-radius: 40px 20px 40px 20px;
-      border: 2px solid #ffd700;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 0 6px rgba(255, 215, 0, 0.08);
-      padding: 0;
-      overflow-y: auto;
-      animation: slideUp 0.4s ease;
-      position: relative;
-    }
-
-    .about-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 24px;
-      border-bottom: 2px solid rgba(255, 215, 0, 0.15);
-      position: sticky;
-      top: 0;
-      background: rgba(20, 20, 45, 0.9);
-      backdrop-filter: blur(8px);
-      z-index: 5;
-      border-radius: 40px 20px 0 0;
-    }
-
-    .about-header .about-title {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.4rem;
-      color: #ffd700;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .about-header .about-title i {
-      color: #ff6b9d;
-      font-size: 1.6rem;
-    }
-
-    .about-close {
-      background: rgba(255, 215, 0, 0.1);
-      border: 2px solid rgba(255, 215, 0, 0.2);
-      color: #ffd700;
-      font-size: 1.2rem;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .about-close:hover {
-      background: rgba(255, 215, 0, 0.25);
+    .overlay-card .close-btn:hover {
       transform: rotate(90deg);
+      color: #d4af7d;
     }
-
-    .about-body {
-      padding: 24px 28px 30px;
-    }
-
-    .about-avatar-large {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid #ffd700;
-      object-fit: cover;
-      margin: 0 auto 20px auto;
-      display: block;
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-    }
-
-    .about-body .story-title {
-      font-family: 'Fredoka One', cursive;
+    .overlay-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
       font-size: 1.8rem;
-      color: #ffd700;
-      text-align: center;
-      margin-bottom: 6px;
+      color: #231c26;
+      margin-bottom: 0.2rem;
+    }
+    .overlay-card .overlay-company {
+      font-weight: 600;
+      color: #d4af7d;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .overlay-card .overlay-date {
+      font-size: 0.9rem;
+      color: #7a6a6a;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .overlay-card .overlay-detail-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .overlay-card .overlay-detail-list li {
+      font-size: 1rem;
+      color: #231c26;
+      margin-bottom: 0.7rem;
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+      line-height: 1.5;
+    }
+    .overlay-card .overlay-detail-list li i {
+      color: #d4af7d;
+      font-size: 0.5rem;
+      width: 18px;
+      margin-top: 6px;
+      flex-shrink: 0;
     }
 
-    .about-body .story-sub {
-      text-align: center;
-      color: #c0b0e0;
-      font-size: 0.95rem;
-      margin-bottom: 20px;
+    .edu-achievement {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed #e8ddd5;
+    }
+    .edu-block h4,
+    .achieve-block h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #231c26;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .edu-block h4 i,
+    .achieve-block h4 i {
+      color: #d4af7d;
+    }
+    .edu-block p {
+      font-size: 0.9rem;
+      color: #231c26;
+      line-height: 1.5;
+    }
+    .achieve-block .big-number {
+      background: #231c26;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+      border: 2px solid #d4af7d;
+      line-height: 1;
+    }
+    .achieve-block .big-number small {
+      font-size: 1rem;
       font-weight: 400;
+      margin-left: 4px;
+    }
+    .achieve-block .achieve-desc {
+      font-size: 0.9rem;
+      color: #231c26;
+    }
+
+    .metric-bar {
+      margin-top: 1.5rem;
+      background: #f8f1eb;
+      border-radius: 60px;
+      padding: 0.7rem 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      border: 1px solid #e8ddd5;
+      gap: 0.5rem 0;
+    }
+    .metric-bar span i {
+      color: #d4af7d;
+      margin-right: 4px;
+    }
+    .footer-note {
+      margin-top: 0.8rem;
+      text-align: right;
+      font-size: 0.75rem;
+      color: #7a6a6a;
       letter-spacing: 0.5px;
     }
-
-    .about-body .story-sub i {
-      color: #ff6b9d;
+    .footer-note i {
+      color: #d4af7d;
+      margin-right: 4px;
     }
 
-    .story-text {
-      color: #d0c8e8;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      font-weight: 400;
+    .site-footer {
+      max-width: 1120px;
+      width: 100%;
+      background: #231c26;
+      border-radius: 36px;
+      padding: 1.8rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #ede6e6;
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 125, 0.10);
+      margin-top: 0.5rem;
     }
-
-    .story-text p {
-      margin-bottom: 16px;
+    .site-footer .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
     }
-
-    .story-text .highlight {
-      color: #ffd700;
+    .site-footer .footer-brand i {
+      font-size: 1.6rem;
+      color: #d4af7d;
+    }
+    .site-footer .footer-brand span {
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+    .site-footer .footer-brand small {
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: #b0a0a0;
+      margin-left: 0.3rem;
+    }
+    .site-footer .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .site-footer .footer-links a {
+      color: #ddd0d0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .site-footer .footer-links a i {
+      color: #d4af7d;
+      font-size: 0.9rem;
+    }
+    .site-footer .footer-links a:hover {
+      color: #d4af7d;
+    }
+    .site-footer .footer-copy {
+      font-size: 0.8rem;
+      color: #7a6a6a;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .site-footer .footer-copy i {
+      color: #d4af7d;
     }
 
-    .story-text .highlight-pink {
-      color: #ff6b9d;
-      font-weight: 600;
+    @media (max-width: 780px) {
+      .cv-card {
+        grid-template-columns: 1fr;
+        border-radius: 28px;
+      }
+      .left-panel {
+        padding: 2rem 1.8rem;
+      }
+      .right-panel {
+        padding: 1.8rem;
+      }
+      .edu-achievement {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .overlay-card {
+        padding: 2rem 1.5rem;
+      }
+      .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem 1.8rem;
+      }
+      .site-footer .footer-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
     }
-
-    .story-divider {
-      border: none;
-      height: 2px;
-      background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.3), transparent);
-      margin: 20px 0;
-    }
-
-    .story-tagline {
-      text-align: center;
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.2rem;
-      color: #ffd700;
-      margin-top: 10px;
-      letter-spacing: 1px;
-    }
-
-    .story-tagline i {
-      color: #ff6b9d;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
-      body { padding: 6px; }
-      .pop-card { padding: 16px 12px 14px; border-radius: 30px; }
-      .sticky-title .title-only h1 { font-size: 1.5rem; }
-      .header { padding: 12px 14px 10px; }
-      .header-top { flex-direction: column; align-items: stretch; gap: 8px; }
-      .header-title-group { justify-content: center; }
-      .grace-badge-compact { font-size: 0.75rem; padding: 4px 12px 4px 4px; }
-      .grace-badge-compact .avatar { width: 28px; height: 28px; }
-      .header-info-center { gap: 10px 16px; }
-      .date-badge-compact { font-size: 0.85rem; padding: 3px 14px; }
-      .price-compact { font-size: 0.85rem; padding: 3px 14px; }
-      .day-num { font-size: 1.1rem; padding: 2px 12px; }
-      .day-tour-name { font-size: 0.7rem; padding: 3px 10px; }
-      .day-date-tag { font-size: 0.7rem; padding: 2px 12px; }
-      .day-preview { font-size: 0.75rem; padding: 6px 12px 4px; gap: 6px 10px; }
-      .modal-header .modal-title { font-size: 1.1rem; }
-      .modal-body .time-badge { flex: 0 0 70px; font-size: 0.8rem; }
-      .modal-body .activity-text { font-size: 0.85rem; gap: 6px; }
-      .modal-body .mini-img-modal { width: 38px; height: 38px; }
-      .footer-contact { font-size: 0.75rem; gap: 6px; }
-      .footer-contact .contact-avatar { width: 32px; height: 32px; }
-      .footer-contact .contact-name { font-size: 0.8rem; }
-      .footer-handle { font-size: 0.85rem; padding: 4px 14px; }
-      .inclusion-strip { gap: 4px 8px; padding: 8px 10px; }
-      .inc-item { font-size: 0.7rem; padding: 3px 10px; }
-      .inc-item i { font-size: 0.9rem; }
-      .click-hint { font-size: 0.6rem; padding: 1px 8px; }
-      .about-content { border-radius: 28px 14px 28px 14px; }
-      .about-header { padding: 12px 16px; }
-      .about-header .about-title { font-size: 1.1rem; }
-      .about-close { width: 34px; height: 34px; font-size: 1rem; }
-      .about-body { padding: 16px 16px 22px; }
-      .about-avatar-large { width: 90px; height: 90px; }
-      .about-body .story-title { font-size: 1.4rem; }
-      .story-text { font-size: 0.85rem; line-height: 1.7; }
-      .story-tagline { font-size: 1rem; }
-      .about-body .story-sub { font-size: 0.8rem; }
-      .tours-modal-body { padding: 14px 16px 18px; }
-      .tours-modal-body ul li { font-size: 0.85rem; padding: 5px 0 5px 24px; }
-      .tours-modal-body h3 { font-size: 1rem; }
-      .flight-modal-body { padding: 14px 16px 18px; }
-      .flight-modal-body .flight-card .flight-no { font-size: 1.1rem; }
-      .flight-modal-body .flight-card .flight-route .leg .time { font-size: 0.95rem; }
-      .participants-modal-body { padding: 14px 16px 18px; }
-      .participants-modal-body table { font-size: 0.8rem; min-width: 320px; }
-      .participants-modal-body table th, .participants-modal-body table td { padding: 6px 8px; }
-
-      /* Splash responsive */
-      #splashScreen .splash-title { font-size: 2.2rem; }
-      #splashScreen .splash-sub { font-size: 1rem; }
-      .checklist-container { padding: 18px 16px; }
-      .checklist-item { font-size: 0.85rem; padding: 6px 0; }
-      .countdown-box { padding: 6px 10px; min-width: 56px; }
-      .countdown-box .num { font-size: 1.5rem; }
-      .main-countdown .cd-box { padding: 3px 8px; min-width: 44px; }
-      .main-countdown .cd-box .num { font-size: 1.1rem; }
-    }
-
-    @media (max-width: 400px) {
-      .pop-card { padding: 12px 8px 10px; }
-      .sticky-title .title-only h1 { font-size: 1.2rem; }
-      .grace-badge-compact { font-size: 0.65rem; padding: 3px 8px 3px 3px; }
-      .grace-badge-compact .avatar { width: 22px; height: 22px; }
-      .date-badge-compact { font-size: 0.75rem; padding: 2px 10px; }
-      .price-compact { font-size: 0.75rem; padding: 2px 10px; }
-      .day-header { padding: 8px 10px; gap: 4px 8px; }
-      .day-num { font-size: 0.9rem; padding: 1px 10px; }
-      #splashScreen .splash-title { font-size: 1.8rem; }
-      .countdown-box { padding: 4px 6px; min-width: 44px; }
-      .countdown-box .num { font-size: 1.2rem; }
-      .main-countdown .cd-box { padding: 2px 6px; min-width: 36px; }
-      .main-countdown .cd-box .num { font-size: 0.9rem; }
-      .participants-modal-body table { font-size: 0.7rem; min-width: 280px; }
-      .participants-modal-body table th, .participants-modal-body table td { padding: 4px 6px; }
+    @media (max-width: 480px) {
+      .exp-item {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .profile-header h1 {
+        font-size: 1.9rem;
+      }
+      .overlay-card h2 {
+        font-size: 1.4rem;
+      }
+      .metric-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 30px;
+        padding: 0.8rem 1.5rem;
+        gap: 0.3rem;
+      }
+      .site-footer .footer-links {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- ===== SPLASH SCREEN with Cherry Blossom Effect ===== -->
-<div id="splashScreen" onclick="dismissSplash()">
-  <canvas id="petalCanvas"></canvas>
-  <div class="splash-content">
-    <div class="splash-title">🌸 Ready to Explore Seoul?</div>
-
-    <!-- Countdown on Splash -->
-    <div class="countdown-container" id="splashCountdown">
-      <div class="countdown-box"><div class="num" id="splashDays">00</div><div class="label">Days</div></div>
-      <div class="countdown-box"><div class="num" id="splashHours">00</div><div class="label">Hours</div></div>
-      <div class="countdown-box"><div class="num" id="splashMinutes">00</div><div class="label">Mins</div></div>
-      <div class="countdown-box"><div class="num" id="splashSeconds">00</div><div class="label">Secs</div></div>
-    </div>
-
-    <div class="splash-sub"><i class="fas fa-heart"></i> Summer in Seoul · August 2026 <i class="fas fa-heart"></i></div>
-
-    <!-- CHECKLIST with e-Arrival Card -->
-    <div class="checklist-container">
-      <h3><i class="fas fa-check-circle"></i> Travel Checklist</h3>
-      <div class="checklist-item"><i class="fas fa-passport check-icon"></i> Passport & Visa ready</div>
-      <div class="checklist-item"><i class="fas fa-laptop"></i> <a href="https://www.e-arrivalcard.go.kr/portal/main/index.do" target="_blank">e-Arrival Card</a></div>
-      <div class="checklist-item"><i class="fas fa-won-sign"></i> Korean Won (KRW) cash</div>
-      <div class="checklist-item"><i class="fas fa-wifi"></i> T-money card / eSIM</div>
-      <div class="checklist-item"><i class="fas fa-umbrella"></i> Light umbrella (summer rain)</div>
-      <div class="checklist-item"><i class="fas fa-sun"></i> Sunscreen & hat</div>
-      <div class="checklist-item"><i class="fas fa-plug"></i> Universal travel adapter</div>
-      <div class="checklist-item"><i class="fas fa-tshirt"></i> Comfortable walking shoes</div>
-    </div>
-
-    <div class="tap-hint"><i class="fas fa-hand-pointer"></i> Tap anywhere to start your adventure ✨</div>
-  </div>
-</div>
-
-<!-- ===== MAIN CONTENT (hidden until splash is dismissed) ===== -->
-<div id="mainContent">
-
-  <div class="pop-card">
-
-    <!-- STICKY TITLE -->
-    <div class="sticky-title">
-      <div class="title-only">
-        <h1>🇰🇷 DIY SEOUL LAND ARRANGEMENT</h1>
-      </div>
-    </div>
-
-    <!-- ===== MAIN COUNTDOWN (top center) ===== -->
-    <div class="main-countdown">
-      <div class="countdown-label"><i class="fas fa-clock"></i> Countdown to Seoul</div>
-      <div class="countdown-boxes" id="mainCountdown">
-        <div class="cd-box"><div class="num" id="mainDays">00</div><div class="label">Days</div></div>
-        <div class="cd-box"><div class="num" id="mainHours">00</div><div class="label">Hours</div></div>
-        <div class="cd-box"><div class="num" id="mainMinutes">00</div><div class="label">Mins</div></div>
-        <div class="cd-box"><div class="num" id="mainSeconds">00</div><div class="label">Secs</div></div>
-      </div>
-    </div>
-
-    <!-- HEADER -->
-    <div class="header">
-      <div class="header-top">
-        <div class="header-title-group">
-          <div class="grace-badge-compact" onclick="openAbout()">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="avatar">
-            <span class="badge-text">✨ by Grace (@theGFsAdvise) ✨</span>
-          </div>
+  <div class="cv-card">
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div class="profile-header">
+        <div class="avatar-icon">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787184000&v=beta&t=suUwMulXW-ZANsK7JpuCKw1Ii1tXg_JGtv2HHpM_6vQ" alt="Grace Pagaduan" />
         </div>
-      </div>
+        <h1>Grace <br />Pagaduan</h1>
+        <div class="title">Client Services &amp; Operations Leader</div>
 
-      <!-- DATE & PRICE - Clickable date opens flight modal, clickable price opens participants -->
-      <div class="header-info-center">
-        <div class="date-badge-compact" onclick="openFlightModal()">
-          <i class="fas fa-calendar-alt"></i> Aug 20 – 24, 2026 <i class="fas fa-plane" style="font-size:0.7rem; margin-left:6px;"></i>
-        </div>
-        <div class="price-compact" onclick="openParticipantsModal()">
-          ₱30,000 per pax * <i class="fas fa-users" style="font-size:0.7rem; margin-left:6px;"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- INCLUSIONS -->
-    <div class="inclusion-strip">
-      <div class="inc-item">
-        <a href="https://drive.google.com/file/d/1I4ML1Z93j3AXPq6N4DP3r-eQX4BYelsd/view?usp=sharing" target="_blank">
-          <i class="fas fa-hotel"></i> Days Hotel Myeongdong
-        </a>
-      </div>
-      <div class="inc-item"><i class="fas fa-shuttle-van"></i> Airport transfers</div>
-      <div class="inc-item" onclick="openToursModal()">
-        <i class="fas fa-ticket-alt"></i> Tours via Klook
-      </div>
-    </div>
-
-    <!-- SCROLLABLE CONTENT -->
-    <div class="scroll-content">
-
-      <!-- DAY 0 -->
-      <div class="day-card" onclick="openModal('modal-day0')">
-        <div class="day-header">
-          <span class="day-num">DAY 0</span>
-          <span class="day-tour-name special"><i class="fas fa-plane-arrival"></i> TO SEOUL 🛬</span>
-          <span class="day-date-tag">Wed, Aug 19</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-suitcase"></i> 9:20 PM Checkin</span>
-          <span><i class="fas fa-plane"></i> 12:20 AM Depart</span>
-        </div>
-      </div>
-
-      <!-- DAY 1 - SEOUL CITY TOUR (UPDATED with link) -->
-      <div class="day-card" onclick="openModal('modal-day1')">
-        <div class="day-header">
-          <span class="day-num">DAY 1</span>
-          <span class="day-tour-name">
-            <a href="https://drive.google.com/file/d/1Rw3SKjMBY9UlAduEEdJJqCVXzynyShBa/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-link"></i> SEOUL CITY TOUR
-            </a>
-          </span>
-          <span class="day-date-tag">Thu, Aug 20</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-plane-arrival"></i> 5:20 AM Arrival</span>
-          <span><i class="fas fa-luggage"></i> Luggage Drop</span>
-          <span><i class="fas fa-flag-checkered"></i> End 6:00 PM</span>
-        </div>
-      </div>
-
-      <!-- DAY 2 - NAMI ISLAND -->
-      <div class="day-card" onclick="openModal('modal-day2')">
-        <div class="day-header">
-          <span class="day-num">DAY 2</span>
-          <span class="day-tour-name"><i class="fas fa-tree"></i> Nami Island</span>
-          <span class="day-date-tag">Fri, Aug 21</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-clock"></i> 5:00 AM Tour</span>
-          <span><i class="fas fa-map-pin"></i> Meet 7:00 AM</span>
-          <span><i class="fas fa-flag-checkered"></i> End 7:00 PM</span>
-        </div>
-      </div>
-
-      <!-- DAY 3 - LEISURE DAY -->
-      <div class="day-card" onclick="openModal('modal-day3')">
-        <div class="day-header">
-          <span class="day-num">DAY 3</span>
-          <span class="day-tour-name"><i class="fas fa-umbrella-beach"></i> Leisure Day</span>
-          <span class="day-date-tag">Sat, Aug 22</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-clock"></i> 7:00 AM Start</span>
-          <span><i class="fas fa-optional"></i> Optional activities</span>
-          <span><i class="fas fa-ship"></i> Han River Cruise</span>
-        </div>
-      </div>
-
-      <!-- DAY 4 - GANGNAM EXPERIENCE -->
-      <div class="day-card" onclick="openModal('modal-day4')">
-        <div class="day-header">
-          <span class="day-num">DAY 4</span>
-          <span class="day-tour-name"><i class="fas fa-city"></i> Gangnam</span>
-          <span class="day-date-tag">Sun, Aug 23</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-clock"></i> 7:00 AM Tour</span>
-          <span><i class="fas fa-map-pin"></i> Meet 9:30 AM</span>
-          <span><i class="fas fa-flag-checkered"></i> End 1:00 PM</span>
-          <span><i class="fas fa-moon"></i> Myeongdong Night Market</span>
-        </div>
-      </div>
-
-      <!-- DAY 5 - DEPARTURE -->
-      <div class="day-card" onclick="openModal('modal-day5')">
-        <div class="day-header">
-          <span class="day-num">DAY 5</span>
-          <span class="day-tour-name departure"><i class="fas fa-plane-departure"></i> DEPARTURE</span>
-          <span class="day-date-tag">Mon, Aug 24</span>
-          <span class="click-hint"><i class="fas fa-hand-pointer"></i> open</span>
-        </div>
-        <div class="day-preview">
-          <span><i class="fas fa-hotel"></i> 3:00 AM Check-out</span>
-          <span><i class="fas fa-plane-departure"></i> 6:35 AM Depart</span>
-        </div>
-      </div>
-
-      <!-- FOOTER -->
-      <div class="footer-modern">
-        <div class="footer-contact">
-          <span style="font-size:0.85rem;">📩 Questions? contact:</span>
-          <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="contact-avatar">
+        <div class="contact-item">
+          <a href="mailto:pagaduan.graceflorenda@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i> pagaduan.graceflorenda@gmail.com
           </a>
-          <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank" class="contact-name"> @theGFsAdvise</a>
         </div>
-        <div class="footer-handle">
-          ✨ GF: Good Times, Far Places ✨
-          <span class="hashtag">#GeeExplores</span>
+        <div class="contact-item">
+          <a href="tel:+63490125198" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone-alt"></i> +63 490 125 198
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://linkedin.com/in/thegfsadvise" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i> linkedin.com/in/thegfsadvise
+          </a>
+        </div>
+        <div class="contact-item">
+          <span class="no-link"><i class="fas fa-map-pin"></i> Mandaluyong, PH 1550</span>
         </div>
       </div>
 
-      <div class="footnote">
-        <i class="fas fa-info-circle"></i> Prices subject to change. Rates are estimated per person based on twin-sharing, availability, and exchange rates.
+      <div>
+        <div class="section-title"><i class="fas fa-chart-line"></i> Core Competencies</div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Client Relations</span> <span>95%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Team Leadership</span> <span>90%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Collections &amp; Recovery</span> <span>88%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Dispatch &amp; Logistics</span> <span>85%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+        </div>
       </div>
 
-    </div> <!-- end scroll-content -->
+      <div>
+        <div class="section-title"><i class="fas fa-certificate"></i> Certifications</div>
+        <ul class="cert-list">
+          <li><i class="fas fa-check-circle"></i> Customer Service Excellence</li>
+          <li><i class="fas fa-check-circle"></i> Leadership &amp; Team Management</li>
+          <li><i class="fas fa-check-circle"></i> Negotiation &amp; Conflict Resolution</li>
+          <li><i class="fas fa-check-circle"></i> <a href="https://csevs.csc.gov.ph/user/eligibility" target="_blank" rel="noopener noreferrer" class="hidden-link">Civil Service Professional Eligibility</a></li>
+        </ul>
+      </div>
 
-  </div> <!-- end pop-card -->
+      <div>
+        <div class="section-title"><i class="fas fa-tools"></i> Tools</div>
+        <ul class="tools-list">
+          <li><i class="fas fa-phone"></i> Zendesk</li>
+          <li><i class="fas fa-tasks"></i> ServiceNow</li>
+          <li><i class="fas fa-truck"></i> CRM Vercel</li>
+          <li><i class="fas fa-file-alt"></i> Microsoft 365</li>
+          <li><i class="fas fa-chart-pie"></i> Google Workspace</li>
+        </ul>
+      </div>
 
-</div> <!-- end mainContent -->
-
-<!-- ===== FLIGHT DETAILS MODAL ===== -->
-<div class="modal-overlay" id="flightModal" onclick="closeModalOutside(event, 'flightModal')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">✈️ Flight Details</span>
-      <button class="modal-close" onclick="closeModal('flightModal')"><i class="fas fa-times"></i></button>
+      <div style="margin-top: 0.2rem;">
+        <span class="empower-badge"><i class="fas fa-star"></i> #ClientAdvocate #ResultsDriven</span>
+      </div>
     </div>
-    <div class="flight-modal-body">
-      <!-- OUTBOUND FLIGHT -->
-      <div class="flight-card">
-        <div class="flight-no">
-          <i class="fas fa-plane"></i> FLIGHT NO. 5J 186
-          <span style="font-size:0.7rem; background:#ffc44f; color:#1a2a6c; padding:2px 12px; border-radius:30px; margin-left:auto;">Outbound</span>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <div class="summary">
+        <p><i class="fas fa-quote-left"></i> I believe every client interaction is an opportunity to build trust. With <strong>10+ years</strong> across service, collections, and operations, I turn complex challenges into seamless experiences that keep clients coming back.</p>
+        <div class="empower-tag"><i class="fas fa-female" style="margin-right: 4px;"></i> mentor · process improvement</div>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <div class="section-title" style="color: #231c26; border-bottom-color: #d4af7d; margin-bottom: 1.2rem;">
+          <i class="fas fa-briefcase" style="color:#d4af7d;"></i> Experience
+          <span style="font-size:0.7rem; font-weight:400; color:#b0a0a0; margin-left:8px;">(click any role for details)</span>
         </div>
-        <div class="flight-route">
-          <div class="leg">
-            <div class="time">20 Aug 2026 12:10 AM</div>
-            <div class="airport"><i class="fas fa-plane-departure" style="color:#d94f7a; margin-right:4px;"></i> DEPARTURE</div>
-            <div class="airport" style="font-weight:700;">Manila Ninoy Aquino International Airport - Terminal 3</div>
+
+        <!-- Dispatch -->
+        <div class="exp-item" data-target="dispatch">
+          <div class="exp-icon"><i class="fas fa-truck"></i></div>
+          <div class="exp-content">
+            <h3>Dispatch Coordinator (Submissions)</h3>
+            <div class="company">Automotive Group · Vernon, CA (Remote)</div>
+            <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2024 – Present</span>
+            <ul>
+              <li><i class="fas fa-circle"></i> <strong>Client Pickup Scheduling:</strong> Coordinate and optimize daily schedules for nationwide tow truck drivers to ensure efficient vehicle pickups for purchase.</li>
+              <li><i class="fas fa-circle"></i> <strong>Documentation &amp; Compliance:</strong> Oversee the completion of all DMV paperwork, verify clear titles, and confirm no active lienholders.</li>
+              <li><i class="fas fa-circle"></i> <strong>Performance &amp; Service:</strong> Maintained strong client satisfaction, reflected in 24 positive reviews over the past year, by coordinating reliable and timely vehicle pickups.</li>
+              <li><i class="fas fa-circle"></i> <strong>Collaboration:</strong> Partner with the logistics team to resolve scheduling conflicts and streamline vehicle pickup operations.</li>
+            </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
-          <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-          <div class="leg" style="text-align:right;">
-            <div class="time">20 Aug 2026 05:20 AM</div>
-            <div class="airport"><i class="fas fa-plane-arrival" style="color:#28a745; margin-right:4px;"></i> ARRIVAL</div>
-            <div class="airport" style="font-weight:700;">Seoul (Incheon) Incheon International Airport - Terminal 1</div>
+        </div>
+
+        <!-- Senior Client Services -->
+        <div class="exp-item" data-target="client-services">
+          <div class="exp-icon"><i class="fas fa-headset"></i></div>
+          <div class="exp-content">
+            <h3>Senior Client Services Representative</h3>
+            <div class="company">Mirion Technologies · Los Angeles, CA (Remote)</div>
+            <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2022 – 2024</span>
+            <ul>
+              <li><i class="fas fa-circle"></i> <strong>Client Account Management:</strong> Regular meetings, Health Check Reports, device monitoring.</li>
+              <li><i class="fas fa-circle"></i> <strong>Issue Resolution:</strong> Billing, crediting, and complex client inquiries.</li>
+              <li><i class="fas fa-circle"></i> Achieved <strong>98% client retention</strong> through proactive communication.</li>
+            </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
-        <div class="flight-type">✈️ Direct Flight · 2h 10m</div>
-      </div>
 
-      <!-- RETURN FLIGHT -->
-      <div class="flight-card" style="border-left-color:#28a745;">
-        <div class="flight-no">
-          <i class="fas fa-plane" style="transform:rotate(180deg);"></i> FLIGHT NO. 5J 185
-          <span style="font-size:0.7rem; background:#28a745; color:white; padding:2px 12px; border-radius:30px; margin-left:auto;">Return</span>
-        </div>
-        <div class="flight-route">
-          <div class="leg">
-            <div class="time">24 Aug 2026 06:35 AM</div>
-            <div class="airport"><i class="fas fa-plane-departure" style="color:#d94f7a; margin-right:4px;"></i> DEPARTURE</div>
-            <div class="airport" style="font-weight:700;">Seoul (Incheon) Incheon International Airport - Terminal 1</div>
-          </div>
-          <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-          <div class="leg" style="text-align:right;">
-            <div class="time">24 Aug 2026 09:45 AM</div>
-            <div class="airport"><i class="fas fa-plane-arrival" style="color:#28a745; margin-right:4px;"></i> ARRIVAL</div>
-            <div class="airport" style="font-weight:700;">Manila Ninoy Aquino International Airport - Terminal 3</div>
+        <!-- Collections Team Lead -->
+        <div class="exp-item" data-target="collections">
+          <div class="exp-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <div class="exp-content">
+            <h3>Collections Team Lead</h3>
+            <div class="company">Hyundai Capital America · Remote</div>
+            <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2017 – 2021</span>
+            <ul>
+              <li><i class="fas fa-circle"></i> <strong>Team Performance &amp; SLAs:</strong> Coaching, monitoring, and continuous improvement.</li>
+              <li><i class="fas fa-circle"></i> <strong>Mentorship &amp; Escalation:</strong> Provide direction and timely escalation handling.</li>
+              <li><i class="fas fa-circle"></i> Exceeded quarterly targets by <strong>32%</strong>; reduced delinquency by 25%.</li>
+            </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
           </div>
         </div>
-        <div class="flight-type">✈️ Direct Flight · 3h 10m</div>
+
+        <!-- Digital & Web Support -->
+        <div class="exp-item" data-target="digital-support">
+          <div class="exp-icon"><i class="fas fa-laptop"></i></div>
+          <div class="exp-content">
+            <h3>Digital &amp; Web Support</h3>
+            <div class="company">Tribune Publishing (TRONC) · Remote</div>
+            <span class="date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2015</span>
+            <ul>
+              <li><i class="fas fa-circle"></i> <strong>Customer Guidance:</strong> Subscription access and navigation tutorials.</li>
+              <li><i class="fas fa-circle"></i> <strong>Troubleshooting:</strong> Login, payment, and account issue resolution.</li>
+              <li><i class="fas fa-circle"></i> Maintained <strong>96% customer satisfaction</strong> for 6 consecutive months.</li>
+            </ul>
+            <span class="click-hint"><i class="fas fa-hand-pointer"></i> click for full details</span>
+          </div>
+        </div>
       </div>
 
-      <div style="margin-top:16px; text-align:center; font-size:0.8rem; color:#888;">
-        <i class="fas fa-info-circle"></i> Flight times are in local time (Manila / Seoul)
+      <!-- Education + Achievement -->
+      <div class="edu-achievement">
+        <div class="edu-block">
+          <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+          <p><strong>B.A. in Business Administration</strong><br />Don Mariano Marcos Memorial State University, La Union, PH · 2015</p>
+          <p style="margin-top: 0.3rem;"><strong>Philippine Junior Marketing Association</strong><br />Regional Director for Northern Luzon · 2014-2015</p>
+        </div>
+        <div class="achieve-block">
+          <h4><i class="fas fa-trophy"></i> Key Achievement</h4>
+          <div class="big-number">TOP <small>Team Lead</small></div>
+          <div class="achieve-desc">Led collections team to <strong>71%</strong> collections rate for the quarter while maintaining positive client relationships and exceeding SLAs.</div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- ===== PARTICIPANTS MODAL ===== -->
-<div class="modal-overlay" id="participantsModal" onclick="closeModalOutside(event, 'participantsModal')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">👤 Participants</span>
-      <button class="modal-close" onclick="closeModal('participantsModal')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="participants-modal-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Passport ID</th>
-              <th>Passport Exp Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>GRACE FLORENDA</td>
-              <td>PAGADUAN</td>
-              <td>P1742187C</td>
-              <td>September 21, 2032</td>
-            </tr>
-            <tr>
-              <td>KAYE DEXEREE</td>
-              <td>LAZO</td>
-              <td>P8350616B</td>
-              <td>November 30, 2031</td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Metric highlight -->
+      <div class="metric-bar">
+        <span><i class="fas fa-arrow-up"></i> <strong>↑32%</strong> team target exceeded</span>
+        <span><i class="fas fa-users"></i> <strong>12</strong> direct reports</span>
+        <span><i class="fas fa-clock"></i> <strong>28%</strong> faster dispatch</span>
+        <span><i class="fas fa-smile"></i> <strong>98%</strong> client retention</span>
       </div>
-      <div class="participant-note">
-        <i class="fas fa-info-circle"></i> Please ensure all passport details are correct and valid for travel.
+      <div class="footer-note">
+        <i class="fas fa-heart"></i> built with purpose · lead with empathy
       </div>
     </div>
   </div>
-</div>
 
-<!-- ===== MODALS ===== -->
+  <!-- ========== NEW SITE FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <i class="fas fa-bolt"></i>
+      <span>Grace Pagaduan <small>· client advocate</small></span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:pagaduan.graceflorenda@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://linkedin.com/in/thegfsadvise" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <!-- UPDATED: Download CV link now points to your Google Drive PDF -->
+      <a href="https://drive.google.com/file/d/1CWwgHpXu5Fmt-uggncqSnNQJl4omY4A8/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Download CV</a>
+    </div>
+    <div class="footer-copy">
+      <i class="far fa-copyright"></i> 2026 · Empowered by purpose
+    </div>
+  </footer>
 
-<!-- DAY 0 -->
-<div class="modal-overlay" id="modal-day0" onclick="closeModalOutside(event, 'modal-day0')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🛬 DAY 0 · Wed, Aug 19</span>
-      <button class="modal-close" onclick="closeModal('modal-day0')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">9:20 PM</span> <span class="activity-text"><i class="fas fa-suitcase"></i> NAIA Airport Baggage Checkin</span></div>
-      <div class="time-activity-row"><span class="time-badge">11:20 PM</span> <span class="activity-text"><i class="fas fa-plane-departure"></i> Boarding – Departure @ 12:20 AM (Aug 20)</span></div>
-      <div class="alert-note"><i class="fas fa-plane"></i> Flight departs early Thursday morning</div>
-    </div>
-  </div>
-</div>
-
-<!-- DAY 1 - SEOUL CITY TOUR -->
-<div class="modal-overlay" id="modal-day1" onclick="closeModalOutside(event, 'modal-day1')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🏙️ DAY 1 · Thu, Aug 20</span>
-      <button class="modal-close" onclick="closeModal('modal-day1')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">5:20 AM</span> <span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival to Incheon International Airport</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><i class="fas fa-luggage"></i> Early Hotel Luggage Drop</span></div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#ffe28f; border-color:#b8602a;">7:00 AM</span>
-        <span class="activity-text">
-          <i class="fas fa-link"></i>
-          <a href="https://drive.google.com/file/d/1Rw3SKjMBY9UlAduEEdJJqCVXzynyShBa/view?usp=sharing" target="_blank" class="map-link">SEOUL CITY TOUR</a>
-        </span>
-      </div>
-      <div class="time-activity-row"><span class="time-badge">8:00 AM</span> <span class="activity-text"><i class="fas fa-map-pin"></i> Myeongdong Subway Station Exit 9</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhdp59i-0FGa3mV4VkCZ9Y3TOtMKlb41Zrm0xWXEZ5Dg&s=10');"></span> Jogyesa Temple</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Gyeongbokgung_Palace_covered_with_snow_%284271054092%29.jpg');"></span> Gyeongbokgung Palace</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHn-m-cP-7pswN4Fy9wrn2nCHo6R_SAff4Wg&s');"></span> Cheongha Korea Ginseng</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/w_500,h_313,c_fill,q_85/activities/p1oplnzyvgprdd5190jx.jpg');"></span> Insadong Culture Street</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCFYUXPXVB1cRJLWl7hKia0Kk-ycxcvCFt_g&s');"></span> Gwangjang Market</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://as1.ftcdn.net/jpg/02/84/37/92/1000_F_284379230_el1VPTLwAZV2xk8g2nrHRG0bAVJGiSYC.jpg');"></span> Namsangol Hanok Village</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1751007329/quqwncigqqvk3xiuy8b3.jpg');"></span> N Seoul Tower</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1713421164/inzbusupfighpiirld3u.jpg');"></span> Namdaemun Market</span></div>
-      <div class="time-activity-row"><span class="time-badge">6:00 PM</span> <span class="activity-text"><i class="fas fa-flag-checkered"></i> End of Tour</span></div>
-      <div class="alert-note"><i class="fas fa-camera"></i> 📸 Perfect for first-time visitors!</div>
+  <!-- ========== OVERLAY ========== -->
+  <div class="overlay" id="detailOverlay">
+    <div class="overlay-card">
+      <button class="close-btn" id="closeOverlayBtn">&times;</button>
+      <div id="overlayContent"></div>
     </div>
   </div>
-</div>
 
-<!-- DAY 2 - NAMI ISLAND -->
-<div class="modal-overlay" id="modal-day2" onclick="closeModalOutside(event, 'modal-day2')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🌳 DAY 2 · Fri, Aug 21</span>
-      <button class="modal-close" onclick="closeModal('modal-day2')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">5:00 AM</span> <span class="activity-text"><i class="fas fa-link"></i> <a href="https://drive.google.com/file/d/1p8aPvlTwPiCz10N3kDvGyhK8uAS0_yXW/view?usp=drive_link" target="_blank" class="map-link">NAMI ISLAND TOUR</a></span></div>
-      <div class="time-activity-row"><span class="time-badge">7:00 AM</span> <span class="activity-text"><i class="fas fa-map-pin"></i> Namsan Yejang Bus Terminal, Myeongdong Station Exit 1</span></div>
-      <div class="time-activity-row"><span class="time-badge">9:50 AM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1723710086/awvzamvzuongpfdjj656.jpg');"></span> Alpaca World 🦙</span></div>
-      <div class="time-activity-row"><span class="time-badge">12:30 PM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1751262716/ieyuoar2uapqcygjh8ch.jpg');"></span> Nami Island</span></div>
-      <div class="time-activity-row"><span class="time-badge">3:30 PM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1723710040/cxhimfgbmv8046z6cnwl.jpg');"></span> Petite France</span></div>
-      <div class="time-activity-row"><span class="time-badge"></span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_1080/v1684480446/w0minhhylqelsyes8nos.jpg');"></span> Italia Village Pinocchio & Davinchi</span></div>
-      <div class="time-activity-row"><span class="time-badge">5:50 PM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1723710040/cxhimfgbmv8046z6cnwl.jpg');"></span> Garden of Morning Calm</span></div>
-      <div class="time-activity-row"><span class="time-badge">7:00 PM</span> <span class="activity-text"><i class="fas fa-flag-checkered"></i> End of Tour - Return</span></div>
-      <div class="alert-note"><i class="fas fa-camera"></i> 📸 Picture-perfect spots everywhere!</div>
-    </div>
-  </div>
-</div>
-
-<!-- DAY 3 - LEISURE DAY -->
-<div class="modal-overlay" id="modal-day3" onclick="closeModalOutside(event, 'modal-day3')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🌿 DAY 3 · Sat, Aug 22</span>
-      <button class="modal-close" onclick="closeModal('modal-day3')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">7:00 AM</span> <span class="activity-text"><i class="fas fa-umbrella-beach"></i> Leisure Day</span></div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#d4edda; border-color:#28a745;">Optional</span>
-        <span class="activity-text"><i class="fas fa-water"></i> Cheonggyecheon Stream</span>
-      </div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#d4edda; border-color:#28a745;">Optional</span>
-        <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://live.staticflickr.com/3791/9687747870_ecf16ba541_b.jpg');"></span> Gwanghwamun Square</span>
-      </div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#d4edda; border-color:#28a745;">Optional</span>
-        <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQljgr8FpnOg2xiVb9gzneN3tXBqsf6gIEghIZenGukaiNPBE6jT-SuWD1P&s=10');"></span> King Sejong Statue</span>
-      </div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#d4edda; border-color:#28a745;">Optional</span>
-        <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://live.staticflickr.com/65535/49486400073_8f621f4bd0_b.jpg');"></span> Statue of Admiral Yi Sun-Shin</span>
-      </div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#d4edda; border-color:#28a745;">Optional</span>
-        <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e3077607-a77f-4921-82e3-62b08e797f03/d8yoknd-98536e19-ffc9-4ddc-92a5-a30041863fdd.jpg/v1/fill/w_600,h_849,q_75,strp/coronet_dance___women_in_hanbok_by_woohnayoung_d8yoknd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lMzA3NzYwNy1hNzdmLTQ5MjEtODJlMy02MmIwOGU3OTdmMDMvZDh5b2tuZC05ODUzNmUxOS1mZmM5LTRkZGMtOTJhNS1hMzAwNDE4NjNmZGQuanBnIiwiaGVpZ2h0IjoiPD04NDkiLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ii93bS9lMzA3NzYwNy1hNzdmLTQ5MjEtODJlMy02MmIwOGU3OTdmMDMvd29vaG5heW91bmctNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.xNugiUshKGWf_NC_9bHnIWu_urvFDPSqU8f6trbJl-0');"></span> Hanbok Rental</span>
-      </div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#ffe28f; border-color:#b8602a;">Evening</span>
-        <span class="activity-text">
-          <i class="fas fa-ship"></i>
-          <a href="https://www.klook.com/en-PH/activity/9931-eland-han-river-cruise-ashley-marine-buffet-seoul/" target="_blank" class="map-link">Han River Cruise</a>
-        </span>
-      </div>
-      <div class="alert-note"><i class="fas fa-camera"></i> 🎉 Take it easy today! Explore at your own pace.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DAY 4 - GANGNAM EXPERIENCE -->
-<div class="modal-overlay" id="modal-day4" onclick="closeModalOutside(event, 'modal-day4')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🏙️ DAY 4 · Sun, Aug 23</span>
-      <button class="modal-close" onclick="closeModal('modal-day4')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">7:00 AM</span> <span class="activity-text"><i class="fas fa-city"></i> Gangnam Experience</span></div>
-      <div class="time-activity-row"><span class="time-badge">9:30 AM</span> <span class="activity-text"><i class="fas fa-map-pin"></i> Assembly at Seolleung Station Exit 10 & Orientation (Tour Start)</span></div>
-      <div class="time-activity-row"><span class="time-badge">9:40 AM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1776237567/lmggprvhvouzwoveyel8.jpg');"></span> Seonjeongneung Tomb</span></div>
-      <div class="time-activity-row"><span class="time-badge">11:00 AM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1776237579/rs9nuqvtylpzhjdnefx8.jpg');"></span> Bongeunsa Temple</span></div>
-      <div class="time-activity-row"><span class="time-badge">12:00 PM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1776237585/wctfvtorar15ovy8pesx.jpg');"></span> Statue of Gangnam Style</span></div>
-      <div class="time-activity-row"><span class="time-badge">12:15 PM</span> <span class="activity-text"><span class="mini-img-modal" style="background-image: url('https://res.klook.com/image/upload/w_500,h_313,c_fill,q_85/activities/sr0x2zumsjucnphynkyk.jpg');"></span> Starfield COEX Mall</span></div>
-      <div class="time-activity-row"><span class="time-badge">1:00 PM</span> <span class="activity-text"><i class="fas fa-flag-checkered"></i> End of Tour</span></div>
-      <div class="time-activity-row">
-        <span class="time-badge" style="background:#ffe28f; border-color:#b8602a;">Evening</span>
-        <span class="activity-text"><i class="fas fa-moon"></i> Myeongdong Night Market</span>
-      </div>
-      <div class="alert-note"><i class="fas fa-camera"></i> 🛍️ Don't forget to shop at COEX Mall!</div>
-    </div>
-  </div>
-</div>
-
-<!-- DAY 5 - DEPARTURE -->
-<div class="modal-overlay" id="modal-day5" onclick="closeModalOutside(event, 'modal-day5')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🙏 DAY 5 · Mon, Aug 24</span>
-      <button class="modal-close" onclick="closeModal('modal-day5')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="time-activity-row"><span class="time-badge">12:00 AM</span> <span class="activity-text"><i class="fas fa-hourglass-start"></i> Departure Day</span></div>
-      <div class="time-activity-row"><span class="time-badge">3:00 AM</span> <span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check Out</span></div>
-      <div class="time-activity-row"><span class="time-badge">5:35 AM</span> <span class="activity-text"><i class="fas fa-plane-departure"></i> Boarding – Departure @ 6:35 AM</span></div>
-      <div class="alert-note"><i class="fas fa-check-circle"></i> Safe travels! 🇰🇷 감사합니다 ✨</div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== TOURS MODAL (Klook) ===== -->
-<div class="modal-overlay" id="toursModal" onclick="closeModalOutside(event, 'toursModal')">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="modal-title">🎫 Tours via Klook</span>
-      <button class="modal-close" onclick="closeModal('toursModal')"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="tours-modal-body">
-      <h3>📌 Tours Included</h3>
-      <ul>
-        <li><a href="https://www.klook.com/en-PH/activity/412-n-seoul-tower-seoul/" target="_blank">N Seoul Tower Ticket</a></li>
-        <li><a href="https://drive.google.com/file/d/1p8aPvlTwPiCz10N3kDvGyhK8uAS0_yXW/view?usp=drive_link" target="_blank">Nami Island Tour</a></li>
-        <li><a href="https://www.klook.com/en-PH/activity/193379-seoul-gangnam-time-travel-royal-tombs-to-starfield-library/?spm=SearchResult.SearchResult_LIST&clickId=513b6f8504" target="_blank">Gangnam Time Travel Tour</a></li>
-        <li><a href="https://www.klook.com/en-PH/activity/228-palace-and-temple-guide-seoul/?spm=SearchResult.SearchResult_LIST&clickId=189f09381b" target="_blank">Seoul Historical Tour (half-day)</a></li>
-      </ul>
-
-      <h3>✨ Optional Add-ons</h3>
-      <ul>
-        <li><a href="https://www.klook.com/en-PH/activity/412-n-seoul-tower-seoul/" target="_blank">Cable Car to N Seoul Tower</a></li>
-        <li><a href="https://www.klook.com/en-PH/activity/9931-eland-han-river-cruise-ashley-marine-buffet-seoul/" target="_blank">Han River Sunset Cruise + Buffet</a></li>
-        <li><a href="https://www.klook.com/activity/188475-seoul-gyeongbokgung-hanbok-rental-experience-palace-fox-hanbok/?spm=SearchResult.SearchResult_LIST&clickId=f98a709561" target="_blank">Hanbok Experience</a></li>
-      </ul>
-
-      <hr class="note-divider" />
-
-      <h3>🛍️ Travel Gifts / Pasalubong Shopping <span style="font-size:0.7rem; font-weight:400; color:#888;">(not part of the tour)</span></h3>
-      <ul>
-        <li><a href="https://i.namu.wiki/i/ZLzMZ_E533noZtyIVN_58IhCcZRToZJSDijxHTQXlI6FHWw_ZDFoTaG44j7IbISYrZcDIur39bu0saRg5Mnkvg.webp" target="_blank">Lotte Mart Zettaplex</a></li>
-      </ul>
-
-      <div class="tour-note">
-        <i class="fas fa-info-circle"></i> Click on any activity name to visit the booking page or view details.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== ABOUT ME OVERLAY ===== -->
-<div class="about-overlay" id="aboutOverlay" onclick="closeAboutOutside(event)">
-  <div class="about-content">
-    <div class="about-header">
-      <div class="about-title">
-        <i class="fas fa-user-astronaut"></i> About Me
-      </div>
-      <button class="about-close" onclick="closeAbout()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="about-body">
-      <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="about-avatar-large">
-
-      <div class="story-title">✈️ Good Times, Far Places</div>
-      <div class="story-sub">✨ <i class="fas fa-heart"></i> Grace · @theGFsadvise <i class="fas fa-heart"></i> ✨</div>
-
-      <div class="story-text">
-        <p>
-          <span class="highlight">I'm Grace</span> — a curious soul with a <span class="highlight-pink">passion for exploration</span> and a deep love for discovering the world's hidden gems.
-          My journey began with a simple belief: <span class="highlight">travel is more than just seeing new places; it's about collecting moments, flavors, and stories.</span>
-        </p>
-
-        <p>
-          From the <span class="highlight-pink">cherry blossom-lined streets of Tokyo</span> to the <span class="highlight">bustling night markets of Seoul</span>
-          and the <span class="highlight-pink">ancient wonders of Beijing</span>, every destination has a story waiting to be told.
-          I don't just plan trips — I curate <span class="highlight">experiences</span> that stay with you long after the journey ends.
-        </p>
-
-        <hr class="story-divider" />
-
-        <p>
-          <span class="highlight">🌏 Why GF Travel Itineraries?</span><br />
-          The <span class="highlight">"GF"</span> stands for <span class="highlight-pink">"Good Times, Far Places"</span> — because that's exactly what I believe travel should be.
-          Whether you're a <span class="highlight">solo adventurer</span>, a <span class="highlight-pink">couple</span>, or a <span class="highlight">group of friends</span>, I'm here to help you turn your travel dreams into reality.
-        </p>
-
-        <p>
-          <span class="highlight-pink">✨ What I offer:</span><br />
-          🗺️ Handcrafted, <span class="highlight">day-by-day itineraries</span><br />
-          🏨 <span class="highlight-pink">Curated hotel recommendations</span> for every budget<br />
-          🍜 <span class="highlight">Local food guides</span> to satisfy every craving<br />
-          📸 <span class="highlight-pink">Instagram-worthy spots</span> you won't want to miss<br />
-          💡 <span class="highlight">Insider tips</span> that only locals know
-        </p>
-
-        <hr class="story-divider" />
-
-        <p>
-          <span class="highlight">💫 Let's explore together.</span><br />
-          Whether you're planning your <span class="highlight-pink">first big trip</span> or your <span class="highlight">fiftieth</span>, I'm here to make every journey
-          <span class="highlight-pink">effortless, memorable, and full of good times.</span>
-        </p>
-      </div>
-
-      <div class="story-tagline">
-        <i class="fas fa-compass"></i> Good Times, Far Places <i class="fas fa-compass"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-  // ===== COUNTDOWN TIMER - Target: August 20, 2026 12:20 AM Manila Time (UTC+8) =====
-  function updateCountdown() {
-    // Manila time is UTC+8
-    const targetDate = new Date('2026-08-20T00:20:00+08:00').getTime();
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      document.querySelectorAll('.num').forEach(el => el.textContent = '00');
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    document.getElementById('splashDays').textContent = String(days).padStart(2, '0');
-    document.getElementById('splashHours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('splashMinutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('splashSeconds').textContent = String(seconds).padStart(2, '0');
-
-    const mainDays = document.getElementById('mainDays');
-    const mainHours = document.getElementById('mainHours');
-    const mainMinutes = document.getElementById('mainMinutes');
-    const mainSeconds = document.getElementById('mainSeconds');
-
-    if (mainDays) {
-      mainDays.textContent = String(days).padStart(2, '0');
-      mainHours.textContent = String(hours).padStart(2, '0');
-      mainMinutes.textContent = String(minutes).padStart(2, '0');
-      mainSeconds.textContent = String(seconds).padStart(2, '0');
-    }
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-
-  // ===== FLIGHT MODAL =====
-  function openFlightModal() {
-    document.getElementById('flightModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  // ===== PARTICIPANTS MODAL =====
-  function openParticipantsModal() {
-    document.getElementById('participantsModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  // ===== CHERRY BLOSSOM PETALS (Canvas) =====
-  (function() {
-    const canvas = document.getElementById('petalCanvas');
-    const ctx = canvas.getContext('2d');
-    let petals = [];
-    let animationId = null;
-    let width, height;
-
-    function resizeCanvas() {
-      const splash = document.getElementById('splashScreen');
-      width = splash.offsetWidth;
-      height = splash.offsetHeight;
-      canvas.width = width;
-      canvas.height = height;
-    }
-
-    class Petal {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height - height;
-        this.size = 6 + Math.random() * 12;
-        this.speedY = 1 + Math.random() * 2.5;
-        this.speedX = -0.5 + Math.random() * 1;
-        this.rotation = Math.random() * Math.PI * 2;
-        this.rotationSpeed = -0.02 + Math.random() * 0.04;
-        this.opacity = 0.6 + Math.random() * 0.4;
-        this.color = `hsla(340, 80%, 75%, ${this.opacity})`;
-        this.wobble = Math.random() * 10;
-        this.wobbleSpeed = 0.02 + Math.random() * 0.03;
-      }
-
-      update() {
-        this.y += this.speedY;
-        this.x += Math.sin(this.wobble) * 0.8 + this.speedX;
-        this.wobble += this.wobbleSpeed;
-        this.rotation += this.rotationSpeed;
-
-        if (this.y > height + 20) {
-          this.y = -20;
-          this.x = Math.random() * width;
+  <script>
+    (function() {
+      const jobDetails = {
+        'dispatch': {
+          title: 'Dispatch Coordinator',
+          company: 'Automotive Group · Vernon, CA (Remote)',
+          date: '2024 – Present',
+          details: [
+            'Client Pickup Scheduling: Coordinate and optimize daily schedules for nationwide tow truck drivers to ensure efficient vehicle pickups for purchase.',
+            'Documentation & Compliance: Oversee the completion of all DMV paperwork, verify clear titles, and confirm no active lienholders to ensure full regulatory and company compliance.',
+            'Performance & Service: Maintained strong client satisfaction, reflected in 24 positive reviews over the past year, by coordinating reliable and timely vehicle pickups.',
+            'Collaboration: Partner with the logistics team to proactively resolve scheduling conflicts and streamline vehicle pickup operations, ensuring seamless coordination for every acquisition.'
+          ]
+        },
+        'client-services': {
+          title: 'Senior Client Services Representative',
+          company: 'Mirion Technologies · Los Angeles, CA (Remote)',
+          date: '2022 – 2024',
+          details: [
+            'Client Account Management: Conduct regular meetings with clients to present RAILs and provide account updates. Proactively manage accounts by sending Health Check Reports and identifying non-communicating devices.',
+            'Issue Resolution & Support: Investigate and resolve billing discrepancies, crediting concerns, and complex client inquiries with professionalism and speed.',
+            'Cross-Functional Collaboration: Partner with sales, collections, and enterprise teams to resolve issues and improve client experience.',
+            'Documentation & Compliance: Oversee Commercial Invoices, Air Waybills, and customs documentation for international shipments, ensuring full regulatory compliance.',
+            'Client Communication: Write clear and professional email correspondence and make calls to provide timely resolutions.',
+            'Achieved 98% client retention through proactive communication and timely resolution.'
+          ]
+        },
+        'collections': {
+          title: 'Collections Team Lead',
+          company: 'Hyundai Capital America · Remote',
+          date: '2017 – 2021',
+          details: [
+            'Team Performance & SLAs: Ensure team meets or exceeds service levels through weekly coaching sessions and continuous improvement initiatives.',
+            'Mentorship & Escalation: Provide direction and sound advice to team members; respond timely to escalations and mentor direct reports.',
+            'Accountability & Reporting: Monitor team performance, plan and assign work, and escalate pending issues (e.g., employment, process breakdown) to Account Manager.',
+            'Led team of 21 collectors, exceeding quarterly targets by 32% and reducing delinquency rates by 25%.',
+            'Developed training materials that improved team productivity by 40%.',
+            'Collaborate with supervisor to plan, assign, and direct work for the team.'
+          ]
+        },
+        'digital-support': {
+          title: 'Digital & Web Support',
+          company: 'Tribune Publishing (TRONC) · Remote',
+          date: '2015',
+          details: [
+            'Customer Guidance: Guide customers on subscription access issues and provide navigation tutorials for digital platforms.',
+            'Troubleshooting: Deliver basic troubleshooting steps to resolve login, payment, and account-related issues.',
+            'Maintained 96% customer satisfaction score for 6 consecutive months.',
+            'Recognized as "Top Agent of the Month" for exceptional problem-solving.',
+            'Document and track customer issues using CRM Tool.'
+          ]
         }
-        if (this.x < -20) this.x = width + 20;
-        if (this.x > width + 20) this.x = -20;
+      };
+
+      const overlay = document.getElementById('detailOverlay');
+      const overlayContent = document.getElementById('overlayContent');
+      const closeBtn = document.getElementById('closeOverlayBtn');
+
+      function openDetail(targetKey) {
+        const data = jobDetails[targetKey];
+        if (!data) return;
+        let html = `
+          <h2>${data.title}</h2>
+          <div class="overlay-company">${data.company}</div>
+          <span class="overlay-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>${data.date}</span>
+          <ul class="overlay-detail-list">
+        `;
+        data.details.forEach(item => {
+          html += `<li><i class="fas fa-circle"></i> ${item}</li>`;
+        });
+        html += `</ul>`;
+        overlayContent.innerHTML = html;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
 
-      draw() {
-        ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.rotation);
-        ctx.globalAlpha = this.opacity;
-        ctx.fillStyle = this.color;
-
-        ctx.beginPath();
-        ctx.ellipse(0, 0, this.size * 0.6, this.size * 0.4, 0, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.fillStyle = `rgba(255, 255, 255, 0.3)`;
-        ctx.beginPath();
-        ctx.ellipse(-this.size * 0.2, -this.size * 0.1, this.size * 0.25, this.size * 0.15, -0.3, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.restore();
+      function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
-    }
 
-    function initPetals(count = 80) {
-      petals = [];
-      for (let i = 0; i < count; i++) {
-        const petal = new Petal();
-        petal.y = Math.random() * height;
-        petals.push(petal);
-      }
-    }
-
-    function animatePetals() {
-      ctx.clearRect(0, 0, width, height);
-      petals.forEach(petal => {
-        petal.update();
-        petal.draw();
+      document.querySelectorAll('.exp-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          const target = this.getAttribute('data-target');
+          if (target) openDetail(target);
+        });
       });
-      animationId = requestAnimationFrame(animatePetals);
-    }
 
-    function startPetals() {
-      resizeCanvas();
-      initPetals(100);
-      if (animationId) cancelAnimationFrame(animationId);
-      animatePetals();
-    }
-
-    window.addEventListener('resize', () => {
-      resizeCanvas();
-      initPetals(100);
-    });
-
-    window.addEventListener('load', () => {
-      setTimeout(startPetals, 100);
-    });
-
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      setTimeout(startPetals, 100);
-    }
-
-    window.stopPetals = function() {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-        animationId = null;
-      }
-    };
-  })();
-
-  // ===== SPLASH DISMISS =====
-  function dismissSplash() {
-    const splash = document.getElementById('splashScreen');
-    const main = document.getElementById('mainContent');
-
-    if (window.stopPetals) window.stopPetals();
-
-    splash.classList.add('hidden');
-    main.classList.add('visible');
-    document.body.style.overflow = 'auto';
-  }
-
-  // ===== MODAL FUNCTIONS =====
-  function openModal(id) {
-    document.getElementById(id).classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-
-  function closeModalOutside(event, id) {
-    if (event.target === document.getElementById(id)) {
-      closeModal(id);
-    }
-  }
-
-  function openToursModal() {
-    document.getElementById('toursModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function openAbout() {
-    document.getElementById('aboutOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeAbout() {
-    document.getElementById('aboutOverlay').classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-
-  function closeAboutOutside(event) {
-    if (event.target === document.getElementById('aboutOverlay')) {
-      closeAbout();
-    }
-  }
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      const openModals = document.querySelectorAll('.modal-overlay.active');
-      openModals.forEach(function(modal) {
-        closeModal(modal.id);
+      closeBtn.addEventListener('click', closeOverlay);
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeOverlay();
       });
-      const about = document.getElementById('aboutOverlay');
-      if (about.classList.contains('active')) {
-        closeAbout();
-      }
-    }
-  });
-</script>
-
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeOverlay();
+      });
+    })();
+  </script>
 </body>
 </html>
